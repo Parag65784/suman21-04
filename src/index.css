@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html, body {
+    @apply m-0 p-0 w-full h-full;
+  }
+
+  body {
+    @apply bg-bg-dark text-neutral-white;
+  }
+}
+
+/* Component classes */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-neutral-white hover:bg-primary-dark transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-light text-neutral-white hover:bg-primary transition-colors duration-200;
+  }
+
+  .btn-success {
+    @apply bg-success text-neutral-white hover:bg-success-dark transition-colors duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-neutral-white hover:bg-danger-dark transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-bg-card border border-bg-light rounded-lg shadow-md;
+  }
+
+  .form-input {
+    @apply bg-bg-light border-bg-light text-neutral-white focus:border-primary focus:ring-primary;
+  }
+
+  .table-header {
+    @apply bg-bg-light text-neutral-white;
+  }
+
+  .table-row {
+    @apply hover:bg-bg-light border-b border-bg-light;
+  }
+
+  .nav-link {
+    @apply text-neutral-silver hover:text-neutral-white transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  .status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .status-badge-success {
+    @apply bg-success-light text-success-dark;
+  }
+
+  .status-badge-pending {
+    @apply bg-primary-light text-neutral-white;
+  }
+
+  .status-badge-danger {
+    @apply bg-danger-light text-danger-dark;
+  }
+
+  /* Updated page container to remove left/right gap */
+  .page-container {
+    @apply w-full max-w-none px-0 mx-0 py-8;
+  }
+
+  .page-title {
+    @apply text-3xl font-bold text-neutral-white mb-6;
+  }
+
+  .page-section {
+    @apply bg-bg-card p-6 rounded-lg shadow-lg mb-8;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-neutral-white mb-4;
+  }
+
+  .text-content {
+    @apply text-neutral-silver leading-relaxed space-y-4;
+  }
+}
