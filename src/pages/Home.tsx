@@ -22,7 +22,7 @@ export function Home() {
       description: "Place your bets on live IPL matches and win big rewards!"
     },
     {
-      image: "https://images.pexels.com/photos/3531246/pexels-photo-3531246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/hero-1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2hlcm8tMS5wbmciLCJpYXQiOjE3NDU2MDQ2NTMsImV4cCI6MTc3NzE0MDY1M30.UcnhvTWzhY-Ubyc1_YH2dYuQsKL-j8a5p79BAJGhFNY",
       title: "Secure Betting",
       description: "Your security is our priority. Bet with confidence on our platform."
     }
@@ -65,10 +65,10 @@ export function Home() {
                 filter: "brightness(0.8)"
               }}
             />
-            <div className="relative h-full flex items-center">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative h-full flex items-center justify-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className={`max-w-2xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  <div className="flex flex-col items-start text-left max-w-2xl">
+                  <div className="flex flex-col items-start justify-center text-left h-full">
                     <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                       {slide.title}
                     </h1>

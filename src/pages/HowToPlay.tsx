@@ -16,7 +16,7 @@ export const HowToPlay: React.FC = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
             backgroundImage: "url('https://images.pexels.com/photos/3657154/pexels-photo-3657154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
-            filter: "brightness(0.4)"
+            filter: "brightness(0.8)"
           }}
         />
         

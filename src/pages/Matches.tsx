@@ -50,8 +50,8 @@ export function Matches() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
-            filter: "brightness(0.4)"
+            backgroundImage: "url('https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/Cummins-Marsh-David-IPL.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L0N1bW1pbnMtTWFyc2gtRGF2aWQtSVBMLnBuZyIsImlhdCI6MTc0NTYwNjA2NCwiZXhwIjoxNzc3MTQyMDY0fQ.GWmOR8q2tC3rTLNIgQbXLo8fg3fFBilDM0sGW45g9hc')",
+            filter: "brightness(0.8)"
           }}
         />
         
@@ -162,7 +162,7 @@ export function Matches() {
                   {game.type === 'win' ? (
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-center flex-1">
-                        <div className="w-16 h-16 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                        <div className="w-26 h-26 mx-auto">
                           <img
                             src={game.teama_logo_url || `https://cricket.org/teams/${game.teama?.toLowerCase()}.png`}
                             alt={game.teama}
@@ -178,7 +178,7 @@ export function Matches() {
                         <div className="text-2xl font-bold text-[#F5B729]">VS</div>
                       </div>
                       <div className="text-center flex-1">
-                        <div className="w-16 h-16 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                        <div className="w-26 h-26 mx-auto">
                           <img
                             src={game.teamb_logo_url || `https://cricket.org/teams/${game.teamb?.toLowerCase()}.png`}
                             alt={game.teamb}
@@ -193,7 +193,7 @@ export function Matches() {
                     </div>
                   ) : (
                     <div className="text-center mb-6">
-                      <div className="w-16 h-16 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                      <div className="w-20 h-20 mx-auto">
                         <img
                           src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
                           alt={game.team}

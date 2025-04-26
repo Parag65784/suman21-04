@@ -22,7 +22,7 @@ export function GameCard({ game }: GameCardProps) {
   };
 
   const getTeamLogo = (url?: string | null, name?: string | null) => (
-    <div className="w-12 h-12 rounded-full bg-[#0D1F33] flex items-center justify-center overflow-hidden">
+    <div className="w-24 h-24 rounded-full bg-[#0D1F33] flex items-center justify-center overflow-hidden">
       {url ? (
         <img
           src={url}

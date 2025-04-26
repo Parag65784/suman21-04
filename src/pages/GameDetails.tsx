@@ -182,24 +182,24 @@ export function GameDetails() {
                 <img
                   src={game.teama_logo_url || `https://cricket.org/teams/${game.teama?.toLowerCase()}.png`}
                   alt={game.teama}
-                  className="w-12 h-12 mx-auto mb-2"
+                  className="w-32 h-32 mx-auto mb-2"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48';
                   }}
                 />
-                <p className="text-xl font-semibold text-primary-dark">{game.teama}</p>
+                <p className="text-xl font-semibold text-[#F5B729]">{game.teama}</p>
               </div>
               <div className="text-3xl font-bold text-neutral-light px-6">VS</div>
               <div className="text-center flex-1">
                 <img
                   src={game.teamb_logo_url || `https://cricket.org/teams/${game.teamb?.toLowerCase()}.png`}
                   alt={game.teamb}
-                  className="w-12 h-12 mx-auto mb-2"
+                  className="w-32 h-32 mx-auto mb-2"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48';
                   }}
                 />
-                <p className="text-xl font-semibold text-primary-dark">{game.teamb}</p>
+                <p className="text-xl font-semibold text-[#F5B729]">{game.teamb}</p>
               </div>
             </div>
           ) : (
@@ -207,12 +207,12 @@ export function GameDetails() {
               <img
                 src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
                 alt={game.team}
-                className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-primary"
+                className="w-32 h-32 mx-auto mb-4 rounded-full border-2 border-primary"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/64';
                 }}
               />
-              <h2 className="text-2xl font-bold text-primary mb-2">{game.team}</h2>
+              <h2 className="text-2xl font-bold text-[#F5B729]">{game.team}</h2>
               <p className="text-lg text-white mb-4">Select a Score Prediction</p>
               <div className="grid grid-cols-3 gap-4 text-white text-sm text-left">
                 {scoreRanges.map((range, idx) => (
