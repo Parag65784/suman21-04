@@ -4,7 +4,7 @@ import { Trophy, User, LogOut, LogIn, UserPlus, Home, Wallet, Info, HelpCircle, 
 import { useAuth } from '../contexts/AuthContext';
 
 export function Navbar() {
-  const { user, signOut } = useAuth();
+  const { user, userRole, signOut } = useAuth(); // ✅ include userRole
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -59,6 +59,13 @@ export function Navbar() {
                 <span>Deposit</span>
               </Link>
             )}
+            {userRole === 'admin' && (
+              <Link to="/admin" className="flex items-center space-x-2 text-[#F5B729] font-semibold hover:text-yellow-400 transition-colors duration-300">
+                <User size={20} />
+                <span>Admin Panel</span>
+              </Link>
+            )}
+
           </div>
 
           {/* Auth Buttons */}
@@ -121,6 +128,12 @@ export function Navbar() {
               {user && (
                 <Link to="/deposit" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Deposit</Link>
               )}
+              {userRole === 'admin' && (
+                <Link to="/admin" className="block px-3 py-2 text-[#F5B729] font-semibold hover:text-yellow-400 transition-colors duration-300">
+                  Admin Panel
+                </Link>
+              )}
+
               {user ? (
                 <>
                   <Link to="/dashboard" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Dashboard</Link>

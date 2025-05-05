@@ -299,7 +299,7 @@ export function Dashboard() {
             }`}
           >
             <Trophy className="w-5 h-5" />
-            <span>Betting History</span>
+            <span>Game History</span>
           </button>
         </div>
 
@@ -354,7 +354,7 @@ export function Dashboard() {
             </>
           ) : (
             <>
-              <h3 className="text-xl font-bold text-white mb-6">Betting History</h3>
+              <h3 className="text-xl font-bold text-white mb-6">Game History</h3>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>

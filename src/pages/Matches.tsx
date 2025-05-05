@@ -50,7 +50,7 @@ export function Matches() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/Cummins-Marsh-David-IPL.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L0N1bW1pbnMtTWFyc2gtRGF2aWQtSVBMLnBuZyIsImlhdCI6MTc0NTYwNjA2NCwiZXhwIjoxNzc3MTQyMDY0fQ.GWmOR8q2tC3rTLNIgQbXLo8fg3fFBilDM0sGW45g9hc')",
+            backgroundImage: "url('https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/pages/VS.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwYWdlcy9WUy5wbmciLCJpYXQiOjE3NDU3NjMyMDYsImV4cCI6MTc3NzI5OTIwNn0.bh2cbt0IrfhchFDQXDTOvjEcGUsUE516Wbyp11WlRAc')",
             filter: "brightness(0.8)"
           }}
         />
@@ -192,8 +192,8 @@ export function Matches() {
                       </div>
                     </div>
                   ) : (
-                    <div className="text-center mb-6">
-                      <div className="w-20 h-20 mx-auto">
+                    <div className="text-center flex flex-col items-center mb-6">
+                      <div className="w-20 h-20">
                         <img
                           src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
                           alt={game.team}

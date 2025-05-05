@@ -12,18 +12,18 @@ export function Home() {
   
   const slides = [
     {
-      image: "https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/hero-3.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2hlcm8tMy5wbmciLCJpYXQiOjE3NDU3NjAwMDMsImV4cCI6MTc3NzI5NjAwM30.zgY9dVio8anhZ6L3LZu4cd40H6zZgf_fq5ovlSM8O2c",
       title: "Welcome to CrickWin",
-      description: "Experience the thrill of cricket betting with real-time matches and instant rewards."
+      description: "Experience the thrill of cricket game with real-time matches and instant rewards."
     },
     {
-      image: "https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/hero-2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2hlcm8tMi5wbmciLCJpYXQiOjE3NDU3NDQ0MjEsImV4cCI6MTc3NzI4MDQyMX0.NKWfXtXplBoa9wmwmnW5ZTvHVV6XxdW-aL7XtqiHBgc",
       title: "Live IPL Matches",
       description: "Place your bets on live IPL matches and win big rewards!"
     },
     {
       image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/hero-1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2hlcm8tMS5wbmciLCJpYXQiOjE3NDU2MDQ2NTMsImV4cCI6MTc3NzE0MDY1M30.UcnhvTWzhY-Ubyc1_YH2dYuQsKL-j8a5p79BAJGhFNY",
-      title: "Secure Betting",
+      title: "Secure Gameplay",
       description: "Your security is our priority. Bet with confidence on our platform."
     }
   ];
@@ -80,7 +80,7 @@ export function Home() {
                       to="/how-to-play"
                       className="inline-flex items-center px-8 py-4 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
                     >
-                      <span>Start Betting</span>
+                      <span>Start Playing</span>
                       <ChevronRight className="ml-2 w-5 h-5" />
                     </Link>
                   </div>

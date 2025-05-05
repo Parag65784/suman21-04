@@ -91,7 +91,7 @@ export function GameCard({ game }: GameCardProps) {
             </div>
           </div>
         ) : (
-          <div className="text-center">
+          <div className="text-center flex flex-col items-center">
             {getTeamLogo(game.team_logo_url ?? undefined, game.team ?? undefined)}
             <div className="mt-2 text-white font-medium">{game.team}</div>
             <div className="text-xs text-gray-400">Predict the final score</div>
@@ -104,7 +104,7 @@ export function GameCard({ game }: GameCardProps) {
           <div className="bg-[#0A1929] p-3 rounded-lg">
             <div className="text-xs text-gray-400 mb-2 flex items-center">
               <TrendingUp className="w-3 h-3 mr-1" />
-              Betting Odds
+              Game Odds
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-[#102A44] rounded px-3 py-2 text-center">

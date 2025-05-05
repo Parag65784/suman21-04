@@ -56,10 +56,10 @@ export const MissionVision: React.FC = () => {
             
             <div className="text-gray-300 space-y-4">
               <p>
-                To provide a secure and enjoyable platform for cricket enthusiasts to engage with their favorite sport through responsible betting and predictions.
+                To provide a secure and enjoyable platform for cricket enthusiasts to engage with their favorite sport through responsible gaming and predictions.
               </p>
               <p>
-                We strive to combine cutting-edge technology with deep cricket knowledge to create the most accurate and fair betting experience in the industry.
+                We strive to combine cutting-edge technology with deep cricket knowledge to create the most accurate and fair gaming experience in the industry.
               </p>
             </div>
             
@@ -82,10 +82,10 @@ export const MissionVision: React.FC = () => {
             
             <div className="text-gray-300 space-y-4">
               <p>
-                A team of cricket lovers, technology experts, and gaming professionals dedicated to creating the best cricket betting experience.
+                A team of cricket lovers, technology experts, and gaming professionals dedicated to creating the best cricket gaming experience.
               </p>
               <p>
-                Our diverse team brings together decades of experience in cricket analysis, software development, and the betting industry to create a platform that truly understands the needs of cricket fans.
+                Our diverse team brings together decades of experience in cricket analysis, software development, and the gaming industry to create a platform that truly understands the needs of cricket fans.
               </p>
             </div>
             

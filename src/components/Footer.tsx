@@ -25,7 +25,7 @@ export function Footer() {
               <h3 className="text-2xl font-bold text-[#F5B729]">CrickWin</h3>
             </div>
             <p className="text-gray-400">
-              Experience the thrill of cricket betting with CrickWin - Your trusted platform for secure and responsible gaming.
+              Experience the thrill of cricket game with CrickWin - Your trusted platform for secure and responsible gaming.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">

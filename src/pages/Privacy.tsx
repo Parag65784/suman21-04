@@ -59,7 +59,7 @@ export function Privacy() {
               </li>
               <li className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
-                <span>Betting history and preferences</span>
+                <span>Game history and preferences</span>
               </li>
             </ul>
           </div>

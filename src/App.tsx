@@ -17,6 +17,7 @@ import { FairPlay } from './pages/FairPlay';
 import { HowToPlay } from './pages/HowToPlay';
 import { About } from './pages/About';
 import { Highlights } from './pages/Highlights';
+import { ArticlePage } from './pages/ArticlePage';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { AdminRoute } from './components/AdminRoute';
 import { ContactPage } from './pages/ContactPage';
@@ -35,6 +36,7 @@ function App() {
               <Route path="how-to-play" element={<HowToPlay />} />
               <Route path="about" element={<About />} />
               <Route path="highlights" element={<Highlights />} />
+              <Route path="article/:id" element={<ArticlePage />} />
               <Route path="terms" element={<Terms />} />
               <Route path="privacy" element={<Privacy />} />
               <Route path="responsible-gaming" element={<ResponsibleGaming />} />

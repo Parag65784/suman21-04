@@ -75,7 +75,6 @@ export function GameDetails() {
       setError('');
       setSubmitting(true);
   
-      // ✅ Check if game is live
       if (game.status !== 'live') {
         setError('This game is not live. You cannot place a bet.');
         return;
@@ -133,171 +132,170 @@ export function GameDetails() {
       setSubmitting(false);
     }
   }
-  
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-DEFAULT"></div>
+      <div className="min-h-screen bg-[#0A1929] flex justify-center items-center">
+        <div className="relative">
+          <div className="w-12 h-12 border-4 border-[#1A8754] border-t-transparent rounded-full animate-spin"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-6 h-6 border-2 border-[#F5B729] border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        </div>
       </div>
     );
   }
 
   if (!game) {
     return (
-      <div className="text-center py-12">
-        <AlertCircle className="mx-auto h-12 w-12 text-danger-DEFAULT mb-4" />
-        <h2 className="text-2xl font-bold text-neutral-black mb-2">Game Not Found</h2>
-        <p className="text-neutral-gray">The game you're looking for doesn't exist.</p>
+      <div className="min-h-screen bg-[#0A1929] flex items-center justify-center">
+        <div className="text-center">
+          <AlertCircle className="mx-auto h-16 w-16 text-[#F5B729] mb-4" />
+          <h2 className="text-2xl font-bold text-white mb-2">Game Not Found</h2>
+          <p className="text-gray-400">The game you're looking for doesn't exist.</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="bg-bg-light rounded-lg shadow-lg overflow-hidden">
-        <div className="bg-primary-DEFAULT p-6">
-          <div className="flex items-center space-x-3 mb-4">
-            {game.type === 'win' ? (
-              <Trophy className="text-white" size={32} />
-            ) : (
-              <Target className="text-white" size={32} />
-            )}
-            <h1 className="text-2xl font-bold text-white">
-              {game.type === 'win' ? 'Match Winner Prediction' : 'Score Prediction'}
-            </h1>
+    <div className="min-h-screen bg-[#0A1929] py-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] overflow-hidden">
+          <div className="bg-[#1A3A5C] p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              {game.type === 'win' ? (
+                <Trophy className="text-[#F5B729]" size={32} />
+              ) : (
+                <Target className="text-[#F5B729]" size={32} />
+              )}
+              <h1 className="text-2xl font-bold text-white">
+                {game.type === 'win' ? 'Match Winner Prediction' : 'Score Prediction'}
+              </h1>
+            </div>
+            <p className="text-gray-400">
+              {new Date(game.date).toLocaleString('en-US', {
+                dateStyle: 'full',
+                timeStyle: 'short'
+              })}
+            </p>
           </div>
-          <p className="text-primary-light">
-            {new Date(game.date).toLocaleString('en-US', {
-              dateStyle: 'full',
-              timeStyle: 'short'
-            })}
-          </p>
-        </div>
 
-        <div className="p-6">
-          {game.type === 'win' ? (
-            <div className="flex items-center justify-between mb-8">
-              <div className="text-center flex-1">
-                <img
-                  src={game.teama_logo_url || `https://cricket.org/teams/${game.teama?.toLowerCase()}.png`}
-                  alt={game.teama}
-                  className="w-32 h-32 mx-auto mb-2"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48';
-                  }}
-                />
-                <p className="text-xl font-semibold text-[#F5B729]">{game.teama}</p>
-              </div>
-              <div className="text-3xl font-bold text-neutral-light px-6">VS</div>
-              <div className="text-center flex-1">
-                <img
-                  src={game.teamb_logo_url || `https://cricket.org/teams/${game.teamb?.toLowerCase()}.png`}
-                  alt={game.teamb}
-                  className="w-32 h-32 mx-auto mb-2"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48';
-                  }}
-                />
-                <p className="text-xl font-semibold text-[#F5B729]">{game.teamb}</p>
-              </div>
-            </div>
-          ) : (
-            <div className="bg-neutral-light rounded-2xl p-6 shadow-lg max-w-md mx-auto text-center">
-              <img
-                src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
-                alt={game.team}
-                className="w-32 h-32 mx-auto mb-4 rounded-full border-2 border-primary"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://via.placeholder.com/64';
-                }}
-              />
-              <h2 className="text-2xl font-bold text-[#F5B729]">{game.team}</h2>
-              <p className="text-lg text-white mb-4">Select a Score Prediction</p>
-              <div className="grid grid-cols-3 gap-4 text-white text-sm text-left">
-                {scoreRanges.map((range, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => setPrediction((idx + 1).toString())}
-                    className={`cursor-pointer bg-neutral-700 hover:bg-primary transition-colors px-4 py-2 rounded-lg text-center ${
-                      prediction === (idx + 1).toString() ? "bg-primary text-white" : ""
-                    }`}
-                  >
-                    {range}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <form onSubmit={placeBet} className="space-y-6 mt-6">
+          <div className="p-6">
             {game.type === 'win' ? (
-              <div>
-                <label className="block text-sm font-medium text-neutral-light mb-1">
-                  Select Winning Team
-                </label>
-                <select
-                  value={prediction}
-                  onChange={(e) => setPrediction(e.target.value)}
-                  className="w-full rounded-lg border-neutral-silver focus:border-primary-light focus:ring-primary-light text-primary-dark"
-                  required
-                >
-                  <option value="">Select a team</option>
-                  <option value={game.teama}>{game.teama}</option>
-                  <option value={game.teamb}>{game.teamb}</option>
-                </select>
+              <div className="flex items-center justify-between mb-8">
+                <div className="text-center flex-1">
+                  <div className="w-32 h-32 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                    <img
+                      src={game.teama_logo_url || `https://cricket.org/teams/${game.teama?.toLowerCase()}.png`}
+                      alt={game.teama}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/128';
+                      }}
+                    />
+                  </div>
+                  <p className="text-xl font-semibold text-white">{game.teama}</p>
+                </div>
+                <div className="text-3xl font-bold text-[#F5B729] px-6">VS</div>
+                <div className="text-center flex-1">
+                  <div className="w-32 h-32 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                    <img
+                      src={game.teamb_logo_url || `https://cricket.org/teams/${game.teamb?.toLowerCase()}.png`}
+                      alt={game.teamb}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/128';
+                      }}
+                    />
+                  </div>
+                  <p className="text-xl font-semibold text-white">{game.teamb}</p>
+                </div>
               </div>
             ) : (
-              <div>
-                <label className="block text-sm font-medium text-neutral-light mb-1">
-                  Predicted Score
-                </label>
-                <select
-                  value={prediction}
-                  onChange={(e) => setPrediction(e.target.value)}
-                  className="w-full rounded-lg border-neutral-white focus:border-primary-light focus:ring-primary-light text-primary-dark"
-                  required
-                >
-                  <option value="">Select a Score</option>
+              <div className="text-center mb-8">
+                <div className="w-32 h-32 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
+                  <img
+                    src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
+                    alt={game.team}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/128';
+                    }}
+                  />
+                </div>
+                <p className="text-xl font-semibold text-white mb-2">{game.team}</p>
+                <p className="text-gray-400">Select a Score Range</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
                   {scoreRanges.map((range, idx) => (
-                    <option key={idx} value={idx + 1}>
+                    <button
+                      key={idx}
+                      onClick={() => setPrediction((idx + 1).toString())}
+                      className={`p-3 rounded-lg text-sm transition-colors duration-300 ${
+                        prediction === (idx + 1).toString()
+                          ? 'bg-[#F5B729] text-[#0A2540]'
+                          : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
+                      }`}
+                    >
                       {range}
-                    </option>
+                    </button>
                   ))}
-                </select>
+                </div>
               </div>
             )}
 
-            <div>
-              <label className="block text-sm font-medium text-neutral-light mb-1">
-                Bet Amount (₹)
-              </label>
-              <input
-                type="number"
-                min="1"
-                step="0.01"
-                value={betAmount}
-                onChange={(e) => setBetAmount(e.target.value)}
-                className="w-full rounded-lg border-neutral-silver focus:border-primary-light focus:ring-primary-light text-primary-dark"
-                required
-              />
-              <p className="text-xs text-neutral-light mt-1">Available Balance: ₹{userBalance.toFixed(2)}</p>
-            </div>
+            <form onSubmit={placeBet} className="space-y-6">
+              {game.type === 'win' && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Select Winning Team
+                  </label>
+                  <select
+                    value={prediction}
+                    onChange={(e) => setPrediction(e.target.value)}
+                    className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                    required
+                  >
+                    <option value="">Select a team</option>
+                    <option value={game.teama}>{game.teama}</option>
+                    <option value={game.teamb}>{game.teamb}</option>
+                  </select>
+                </div>
+              )}
 
-            {error && (
-              <div className="bg-danger-light border border-danger-DEFAULT text-danger-dark px-4 py-3 rounded-lg">
-                {error}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Bet Amount (₹)
+                </label>
+                <input
+                  type="number"
+                  min="1"
+                  step="0.01"
+                  value={betAmount}
+                  onChange={(e) => setBetAmount(e.target.value)}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  required
+                />
+                <p className="text-sm text-gray-400 mt-1">
+                  Available Balance: ₹{userBalance.toFixed(2)}
+                </p>
               </div>
-            )}
 
-            <button
-              type="submit"
-              disabled={submitting}
-              className="w-full bg-success-light text-white py-3 rounded-lg hover:bg-success-dark focus:outline-none focus:ring-2 focus:ring-success-light focus:ring-offset-2 disabled:opacity-50"
-            >
-              {submitting ? 'Placing Bet...' : 'Place Bet'}
-            </button>
-          </form>
+              {error && (
+                <div className="bg-red-900/20 border border-red-500 text-red-500 px-4 py-3 rounded-lg">
+                  {error}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300 disabled:opacity-50"
+              >
+                {submitting ? 'Placing Bet...' : 'Place Bet'}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

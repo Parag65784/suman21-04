@@ -6,10 +6,13 @@ interface Game {
   id: string;
   type: 'win' | 'score';
   date: string;
-  teamA?: string;
-  teamB?: string;
+  teama?: string;
+  teamb?: string;
   team?: string;
   status: 'upcoming' | 'live' | 'completed';
+  location?: string;
+  odds?: number;
+  odds_type?: 'win' | 'score';
 }
 
 interface WithdrawalRequest {
@@ -31,9 +34,12 @@ export function AdminDashboard() {
   const [newGame, setNewGame] = useState({
     type: 'win',
     date: '',
-    teamA: '',
-    teamB: '',
+    teama: '',
+    teamb: '',
     team: '',
+    location: '',
+    odds: 0,
+    odds_type: 'win'
   });
 
   useEffect(() => {
@@ -81,14 +87,15 @@ export function AdminDashboard() {
         .insert({
           type: newGame.type,
           date: newGame.date,
-          teamA: newGame.type === 'win' ? newGame.teamA : null,
-          teamB: newGame.type === 'win' ? newGame.teamB : null,
+          teama: newGame.type === 'win' ? newGame.teama : null,
+          teamb: newGame.type === 'win' ? newGame.teamb : null,
           team: newGame.type === 'score' ? newGame.team : null,
           status: 'upcoming'
         });
 
       if (error) throw error;
-      setNewGame({ type: 'win', date: '', teamA: '', teamB: '', team: '' });
+      setNewGame({ type: 'win', date: '', teama: '', teamb: '', team: '', location: '', odds: 0, odds_type: 'win' });
+      alert('Game created successfully!');
       await fetchGames();
     } catch (error) {
       console.error('Error creating game:', error);
@@ -110,201 +117,211 @@ export function AdminDashboard() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8">Admin Dashboard</h1>
+    <div className="min-h-screen bg-[#0A1929] py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl font-bold text-white mb-8">Admin Dashboard</h1>
 
-      {/* Create New Game */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Create New Game</h2>
-        <form onSubmit={createGame} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Game Type
-              </label>
-              <select
-                value={newGame.type}
-                onChange={(e) => setNewGame({ ...newGame, type: e.target.value as 'win' | 'score' })}
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              >
-                <option value="win">Match Winner</option>
-                <option value="score">Score Prediction</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Match Date
-              </label>
-              <input
-                type="datetime-local"
-                value={newGame.date}
-                onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              />
-            </div>
-          </div>
-
-          {newGame.type === 'win' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Create New Game */}
+        <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-8 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-6">Create New Game</h2>
+          <form onSubmit={createGame} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Team A
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Game Type
+                </label>
+                <select
+                  value={newGame.type}
+                  onChange={(e) => setNewGame({ ...newGame, type: e.target.value as 'win' | 'score' })}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                >
+                  <option value="win">Match Winner</option>
+                  <option value="score">Score Prediction</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Match Date
                 </label>
                 <input
-                  type="text"
-                  value={newGame.teamA}
-                  onChange={(e) => setNewGame({ ...newGame, teamA: e.target.value })}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Enter team name"
+                  type="datetime-local"
+                  value={newGame.date}
+                  onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Team B
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Location
                 </label>
                 <input
                   type="text"
-                  value={newGame.teamB}
-                  onChange={(e) => setNewGame({ ...newGame, teamB: e.target.value })}
-                  className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Enter team name"
+                  value={newGame.location}
+                  onChange={(e) => setNewGame({ ...newGame, location: e.target.value })}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  placeholder="Enter location"
+                />  
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Odds
+                </label>
+                <input
+                  type="number"
+                  value={newGame.odds}
+                  onChange={(e) => setNewGame({ ...newGame, odds: parseFloat(e.target.value) })}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  placeholder="Enter odds"
                 />
               </div>
             </div>
-          ) : (
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Team
-              </label>
-              <input
-                type="text"
-                value={newGame.team}
-                onChange={(e) => setNewGame({ ...newGame, team: e.target.value })}
-                className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Enter team name"
-              />
-            </div>
-          )}
 
-          <button
-            type="submit"
-            className="w-full md:w-auto px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center justify-center gap-2"
-          >
-            <Plus size={20} />
-            Create Game
-          </button>
-        </form>
-      </div>
+            {/* Team Names */}
 
-      {/* Games List */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Games</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead>
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Date
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Type
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Teams
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {games.map((game) => (
-                <tr key={game.id}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {new Date(game.date).toLocaleDateString()}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {game.type === 'win' ? 'Match Winner' : 'Score Prediction'}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {game.type === 'win' ? `${game.teamA} vs ${game.teamB}` : game.team}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                      game.status === 'completed' ? 'bg-green-100 text-green-800' :
-                      game.status === 'live' ? 'bg-blue-100 text-blue-800' :
-                      'bg-yellow-100 text-yellow-800'
-                    }`}>
-                      {game.status.charAt(0).toUpperCase() + game.status.slice(1)}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+            {newGame.type === 'win' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Team A
+                  </label>
+                  <input
+                    type="text"
+                    value={newGame.teama}
+                    onChange={(e) => setNewGame({ ...newGame, teama: e.target.value })}
+                    className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                    placeholder="Enter team name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Team B
+                  </label>
+                  <input
+                    type="text"
+                    value={newGame.teamb}
+                    onChange={(e) => setNewGame({ ...newGame, teamb: e.target.value })}
+                    className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                    placeholder="Enter team name"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Team
+                </label>
+                <input
+                  type="text"
+                  value={newGame.team}
+                  onChange={(e) => setNewGame({ ...newGame, team: e.target.value })}
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  placeholder="Enter team name"
+                />
+              </div>
+            )}
+
+            <button
+              type="submit"
+              className="px-6 py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors flex items-center justify-center gap-2"
+            >
+              <Plus size={20} />
+              Create Game
+            </button>
+          </form>
         </div>
-      </div>
 
-      {/* Withdrawal Requests */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4">Withdrawal Requests</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead>
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  User
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Amount
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Wallet Address
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Date
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Actions
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {withdrawals.map((withdrawal) => (
-                <tr key={withdrawal.id}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{withdrawal.user.name}</div>
-                    <div className="text-sm text-gray-500">{withdrawal.user.email}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    ₹{withdrawal.amount}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {withdrawal.user.wallet_address}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {new Date(withdrawal.created_at).toLocaleDateString()}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={() => handleWithdrawal(withdrawal.id, 'approve')}
-                        className="text-green-600 hover:text-green-900"
-                      >
-                        <Check size={20} />
-                      </button>
-                      <button
-                        onClick={() => handleWithdrawal(withdrawal.id, 'reject')}
-                        className="text-red-600 hover:text-red-900"
-                      >
-                        <X size={20} />
-                      </button>
-                    </div>
-                  </td>
+        {/* Games List */}
+        <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-8 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-6">Games</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-[#1A3A5C]">
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Date</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Type</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Teams</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {games.map((game) => (
+                  <tr key={game.id} className="border-b border-[#1A3A5C]">
+                    <td className="py-4 px-6 text-gray-300">
+                      {new Date(game.date).toLocaleDateString()}
+                    </td>
+                    <td className="py-4 px-6 text-white">
+                      {game.type === 'win' ? 'Match Winner' : 'Score Prediction'}
+                    </td>
+                    <td className="py-4 px-6 text-white">
+                      {game.type === 'win' ? `${game.teama} vs ${game.teamb}` : game.team}
+                    </td>
+                    <td className="py-4 px-6">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        game.status === 'completed' ? 'bg-[#1A8754]/20 text-[#1A8754]' :
+                        game.status === 'live' ? 'bg-[#F5B729]/20 text-[#F5B729]' :
+                        'bg-gray-500/20 text-gray-400'
+                      }`}>
+                        {game.status.charAt(0).toUpperCase() + game.status.slice(1)}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Withdrawal Requests */}
+        <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-8">
+          <h2 className="text-xl font-semibold text-white mb-6">Withdrawal Requests</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-[#1A3A5C]">
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">User</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Amount</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Wallet Address</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Date</th>
+                  <th className="text-left py-4 px-6 text-sm font-medium text-gray-400">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {withdrawals.map((withdrawal) => (
+                  <tr key={withdrawal.id} className="border-b border-[#1A3A5C]">
+                    <td className="py-4 px-6">
+                      <div className="text-white font-medium">{withdrawal.user.name}</div>
+                      <div className="text-gray-400 text-sm">{withdrawal.user.email}</div>
+                    </td>
+                    <td className="py-4 px-6 text-[#F5B729] font-bold">
+                      ₹{withdrawal.amount}
+                    </td>
+                    <td className="py-4 px-6 text-gray-300 font-mono text-sm">
+                      {withdrawal.user.wallet_address}
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">
+                      {new Date(withdrawal.created_at).toLocaleDateString()}
+                    </td>
+                    <td className="py-4 px-6">
+                      <div className="flex space-x-2">
+                        <button
+                          onClick={() => handleWithdrawal(withdrawal.id, 'approve')}
+                          className="p-2 bg-[#1A8754]/20 text-[#1A8754] rounded-lg hover:bg-[#1A8754]/30 transition-colors"
+                        >
+                          <Check size={20} />
+                        </button>
+                        <button
+                          onClick={() => handleWithdrawal(withdrawal.id, 'reject')}
+                          className="p-2 bg-red-500/20 text-red-500 rounded-lg hover:bg-red-500/30 transition-colors"
+                        >
+                          <X size={20} />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

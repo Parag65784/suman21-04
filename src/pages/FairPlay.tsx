@@ -46,7 +46,7 @@ export function FairPlay() {
             <h2 className="text-2xl font-bold text-white mb-4">Fair Gaming Practices</h2>
             <p className="text-gray-300">
               CrickWin is committed to maintaining the highest standards of fair play
-              and ensuring all betting activities are conducted transparently and ethically.
+              and ensuring all game activities are conducted transparently and ethically.
             </p>
           </div>
 

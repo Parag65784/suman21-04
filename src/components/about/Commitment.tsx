@@ -43,7 +43,7 @@ export const Commitment: React.FC = () => {
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/2233442/pexels-photo-2233442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                src="https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/CrickWin.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L0NyaWNrV2luLnBuZyIsImlhdCI6MTc0NTczNzM0MCwiZXhwIjoxNzc3MjczMzQwfQ.X2wu9SOQPLCO0KiuSAeCFxBzwdCZNd05FPDSM70_K34" 
                 alt="Cricket stadium" 
                 className="rounded-xl shadow-2xl"
               />

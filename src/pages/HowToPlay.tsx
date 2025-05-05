@@ -15,7 +15,7 @@ export const HowToPlay: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('https://images.pexels.com/photos/3657154/pexels-photo-3657154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
+            backgroundImage: "url('https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/pages/Untitled%20design%20(4).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwYWdlcy9VbnRpdGxlZCBkZXNpZ24gKDQpLnBuZyIsImlhdCI6MTc0NTc2MTgxMiwiZXhwIjoxNzc3Mjk3ODEyfQ.tZ96Xbqx0vss4jQDyc1Exn1q_-cfnMw2i1giR20Ru5Y')",
             filter: "brightness(0.8)"
           }}
         />
@@ -38,7 +38,7 @@ export const HowToPlay: React.FC = () => {
             </h1>
             <div className="w-20 h-1 bg-[#1A8754] mb-6" />
             <p className="text-xl text-gray-200 max-w-2xl">
-              Your guide to making winning predictions and managing your cricket betting experience.
+              Your guide to making winning predictions and managing your cricket game experience.
             </p>
           </div>
         </div>
@@ -111,8 +111,7 @@ export const HowToPlay: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="relative">
                 <img 
-                  src="https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/virat_kohli_century_vs_srh_ap.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L3ZpcmF0X2tvaGxpX2NlbnR1cnlfdnNfc3JoX2FwLndlYnAiLCJpYXQiOjE3NDU0MjgwNzksImV4cCI6MTc3Njk2NDA3OX0.ANLxFhnGOybJC4XMFRhT1PDyebnFzISbjs2PGb9qrHY"
-                  alt="Cricket scoreboard"
+                  src="https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/ChatGPT%20Image%20May%205,%202025,%2003_56_43%20PM.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L0NoYXRHUFQgSW1hZ2UgTWF5IDUsIDIwMjUsIDAzXzU2XzQzIFBNLnBuZyIsImlhdCI6MTc0NjQ0MDg2MywiZXhwIjoxNzc3OTc2ODYzfQ.Gru5uRqzEEC7jAZ_EylYNeqlp-KLBOalNY5nhUZ3DtE"
                   className="rounded-xl shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] to-transparent opacity-60 rounded-xl"></div>
@@ -204,7 +203,7 @@ export const HowToPlay: React.FC = () => {
                       <AlertTriangle className="w-4 h-4 text-white" />
                     </div>
                   </div>
-                  <p>Set betting limits for responsible gaming</p>
+                  <p>Set game limits for responsible gaming</p>
                 </li>
               </ul>
             </div>

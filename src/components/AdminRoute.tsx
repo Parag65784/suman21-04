@@ -3,8 +3,8 @@ import { Navigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 export function AdminRoute({ children }: { children: React.ReactNode }) {
-  const { user, loading } = useAuth();
-  const isAdmin = user?.user_metadata?.role === 'admin';
+  const { user, userRole, loading } = useAuth();
+  const isAdmin = userRole === 'admin';
 
   if (loading) {
     return <div>Loading...</div>;

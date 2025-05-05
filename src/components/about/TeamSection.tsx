@@ -27,7 +27,7 @@ export const TeamSection: React.FC = () => {
     {
       name: "Rahul Sharma",
       role: "CEO & Founder",
-      bio: "Former cricket analyst with 15+ years of experience in the sports betting industry.",
+      bio: "Former cricket analyst with 15+ years of experience in the sports gaming industry.",
       image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
     },
     {
@@ -45,7 +45,7 @@ export const TeamSection: React.FC = () => {
     {
       name: "Sarah Johnson",
       role: "Customer Experience",
-      bio: "Dedicated to creating the most user-friendly betting platform in the industry.",
+      bio: "Dedicated to creating the most user-friendly gaming platform in the industry.",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
     }
   ];

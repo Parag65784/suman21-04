@@ -86,7 +86,7 @@ export function Terms() {
             <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
               <Scale className="w-8 h-8" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-4">Betting Rules</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Game Rules</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-white font-medium mb-3">General Rules</h3>
@@ -114,7 +114,7 @@ export function Terms() {
                   </li>
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
-                    <span>Suspicious betting patterns</span>
+                    <span>Suspicious gaming patterns</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>

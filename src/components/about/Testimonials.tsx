@@ -30,21 +30,21 @@ export const Testimonials: React.FC = () => {
       location: "Mumbai, India",
       quote: "CrickWin has transformed how I engage with cricket matches. Their predictions are incredibly accurate, and the platform is easy to use.",
       rating: 5,
-      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/image-3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2ltYWdlLTMuanBnIiwiaWF0IjoxNzQ2NDQxNTIxLCJleHAiOjE3Nzc5Nzc1MjF9.yhLcXyyM0fguDNGSwxUIOojeF1AZrnbWsAlcceJQ4J8"
     },
     {
       name: "James Wilson",
-      location: "London, UK",
-      quote: "I've tried many cricket betting platforms, but CrickWin stands out for its fairness and transparency. The payouts are quick, and customer service is excellent.",
+      location: "Chennai, IN",
+      quote: "I've tried many cricket gaming platforms, but CrickWin stands out for its fairness and transparency. The payouts are quick, and customer service is excellent.",
       rating: 5,
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/image-1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2ltYWdlLTEuanBnIiwiaWF0IjoxNzQ2NDQxNDQyLCJleHAiOjE3Nzc5Nzc0NDJ9.x-DLNdA--95ElJbeTtKBKU2vjrm2s0MZ4sXRm7OcR0E"
     },
     {
-      name: "Sophie Taylor",
-      location: "Sydney, Australia",
+      name: "Abshike Kumar",
+      location: "Delhi, India",
       quote: "As a lifelong cricket fan, I appreciate the depth of analysis that CrickWin provides. It helps me make informed decisions and enhances my enjoyment of the matches.",
       rating: 4,
-      image: "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+      image: "https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/contact/image-1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJjb250YWN0L2ltYWdlLTEuanBnIiwiaWF0IjoxNzQ2NDQxNTUxLCJleHAiOjE3Nzc5Nzc1NTF9.2Gl-VXd2jwQ4LsK6tADdDg6MdiHfZvm0kNLVJtIbr2g"
     }
   ];
 

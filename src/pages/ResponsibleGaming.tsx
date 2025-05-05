@@ -53,7 +53,7 @@ export function ResponsibleGaming() {
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
-                <span>Deposit and betting limits</span>
+                <span>Deposit and game limits</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export function ResponsibleGaming() {
                 <p className="text-sm text-gray-300">Set daily, weekly, or monthly deposit caps</p>
               </div>
               <div className="bg-[#1A3A5C] p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Betting Limits</h3>
+                <h3 className="text-white font-medium mb-2">Game Limits</h3>
                 <p className="text-sm text-gray-300">Control maximum bet amounts</p>
               </div>
               <div className="bg-[#1A3A5C] p-4 rounded-lg">
@@ -94,7 +94,7 @@ export function ResponsibleGaming() {
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
-                  <span>Betting more than you can afford to lose</span>
+                  <span>Playing more than you can afford to lose</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
@@ -116,7 +116,7 @@ export function ResponsibleGaming() {
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
-                  <span>Feeling anxious or stressed about betting</span>
+                  <span>Feeling anxious or stressed about gaming</span>
                 </div>
               </div>
             </div>

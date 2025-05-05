@@ -13,7 +13,7 @@ export const AboutHero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
+          backgroundImage: "url('https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/pages/Untitled%20design%20(5).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwYWdlcy9VbnRpdGxlZCBkZXNpZ24gKDUpLnBuZyIsImlhdCI6MTc0NTc2MTg1MywiZXhwIjoxNzc3Mjk3ODUzfQ.G6gJ1s4z2txkqN_ZolSrOgZNgKyWIGj904jokHLvHs4')",
           filter: "brightness(0.8)"
         }}
       />
@@ -35,7 +35,7 @@ export const AboutHero: React.FC = () => {
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl">
-            Your trusted platform for cricket betting and predictions, combining passion for cricket with cutting-edge technology.
+            Your trusted platform for cricket gaming and predictions, combining passion for cricket with cutting-edge technology.
           </p>
         </div>
       </div>

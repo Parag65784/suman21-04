@@ -39,7 +39,7 @@ export const WhyChooseUs: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Us</h2>
           <div className="w-20 h-1 bg-[#1A8754] mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We combine passion for cricket with cutting-edge technology to deliver an unmatched betting experience
+            We combine passion for cricket with cutting-edge technology to deliver an unmatched gaming experience
           </p>
         </div>
         
