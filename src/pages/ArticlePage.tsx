@@ -84,7 +84,7 @@ export function ArticlePage() {
           <div className="max-w-7xl mx-auto">
             <Link 
               to="/highlights"
-              className="inline-flex items-center space-x-2 text-[#004aad] hover:text-[#cb6ce6] mb-6 transition-colors"
+              className="inline-flex items-center space-x-2 text-[#cb6ce6] hover:text-[#004aad] mb-6 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Highlights</span>
