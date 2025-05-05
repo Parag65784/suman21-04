@@ -147,7 +147,7 @@ export function AdminDashboard() {
                   type="datetime-local"
                   value={newGame.date}
                   onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
-                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#cb6ce6]"
                 />
               </div>
               <div>

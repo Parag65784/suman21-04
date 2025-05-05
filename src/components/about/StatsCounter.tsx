@@ -34,22 +34,22 @@ export const StatsCounter: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <StatItem 
-            icon={<Users className="w-8 h-8 text-[#F5B729]" />} 
+            icon={<Users className="w-8 h-8 text-[#004aad]" />} 
             value={`${(counts.users / 1000).toFixed(0)}K+`} 
             label="Active Users" 
           />
           <StatItem 
-            icon={<Trophy className="w-8 h-8 text-[#F5B729]" />} 
+            icon={<Trophy className="w-8 h-8 text-[#004aad]" />} 
             value={`${counts.tournaments}+`} 
             label="Tournaments Covered" 
           />
           <StatItem 
-            icon={<Calendar className="w-8 h-8 text-[#F5B729]" />} 
+            icon={<Calendar className="w-8 h-8 text-[#004aad]" />} 
             value={`${counts.experience.toFixed(1)}+`} 
             label="Years Experience" 
           />
           <StatItem 
-            icon={<MapPin className="w-8 h-8 text-[#F5B729]" />} 
+            icon={<MapPin className="w-8 h-8 text-[#004aad]" />} 
             value={`${counts.countries}+`} 
             label="Countries" 
           />

@@ -50,7 +50,7 @@ export function GamesList() {
         <div className="relative">
           <div className="w-12 h-12 border-4 border-[#1A8754] border-t-transparent rounded-full animate-spin"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-[#F5B729] border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-6 h-6 border-2 border-[#cb6ce6] border-t-transparent rounded-full animate-spin"></div>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export function GamesList() {
                 onClick={() => setFilter(value as typeof filter)}
                 className={`px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2 ${
                   filter === value
-                    ? 'bg-[#F5B729] text-[#0A2540]'
+                    ? 'bg-[#cb6ce6] text-[#0A2540]'
                     : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                 }`}
               >

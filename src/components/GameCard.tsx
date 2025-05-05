@@ -140,7 +140,7 @@ export function GameCard({ game }: GameCardProps) {
         {/* Game type tag */}
         <div className="flex items-center gap-2 text-sm text-white font-medium">
           <div className="bg-[#1A8754]/10 p-2 rounded-md">
-            {isWinGame ? <Trophy className="w-4 h-4 text-[#F5B729]" /> : <Target className="w-4 h-4 text-[#F5B729]" />}
+            {isWinGame ? <Trophy className="w-4 h-4 text-[#004aad]" /> : <Target className="w-4 h-4 text-[#cb6ce6]" />}
           </div>
           {isWinGame ? 'Match Winner' : 'Score Prediction'}
         </div>
@@ -148,7 +148,7 @@ export function GameCard({ game }: GameCardProps) {
         {/* CTA Button */}
         <Link
           to={`/games/${game.id}`}
-          className="block w-full text-center py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors"
+          className="block w-full text-center py-3 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors"
         >
           {game.status === 'live' ? 'Bet Now' : 'Place Bet'}
         </Link>

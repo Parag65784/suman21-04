@@ -84,7 +84,7 @@ export const Commitment: React.FC = () => {
               <div className="mt-8">
                 <Link 
                   to="/Contact" 
-                  className="inline-flex items-center px-6 py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-[#004aad] text-[#0A2540] font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300"
                 >
                   Contact Our Team
                 </Link>

@@ -111,7 +111,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
       className={`bg-gradient-to-br from-[#0A2540] to-[#0A1929] p-8 rounded-xl shadow-xl border border-[#1A3A5C] hover:border-[#1A8754] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-1000 delay-${delay} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-12 h-12 text-[#F5B729]">
+      <div className="w-12 h-12 text-[#cb6ce6] mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-bold text-white mb-3">{title}</h3>

@@ -113,7 +113,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, image, delay, 
         
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <h3 className="text-xl font-bold text-white mb-1">{name}</h3>
-          <p className="text-[#F5B729] font-medium">{role}</p>
+          <p className="text-[#cb6ce6] font-medium">{role}</p>
         </div>
       </div>
       
@@ -121,13 +121,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, image, delay, 
         <p className="text-gray-300 mb-4">{bio}</p>
         
         <div className="flex space-x-3">
-          <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors">
+          <a href="#" className="text-gray-400 hover:text-[#004aad] transition-colors">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors">
+          <a href="#" className="text-gray-400 hover:text-[#004aad] transition-colors">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors">
+          <a href="#" className="text-gray-400 hover:text-[#004aad] transition-colors">
             <Mail className="w-5 h-5" />
           </a>
         </div>

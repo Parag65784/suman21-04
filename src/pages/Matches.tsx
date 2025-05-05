@@ -59,7 +59,7 @@ export function Matches() {
         
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Available <span className="text-[#F5B729]">Matches</span>
+            Available <span className="text-[#004aad]">Matches</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-300 max-w-2xl">
@@ -75,7 +75,7 @@ export function Matches() {
             onClick={() => setActiveTab('all')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'all'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -86,7 +86,7 @@ export function Matches() {
             onClick={() => setActiveTab('win')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'win'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -97,7 +97,7 @@ export function Matches() {
             onClick={() => setActiveTab('score')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'score'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -111,7 +111,7 @@ export function Matches() {
             <div className="relative">
               <div className="w-12 h-12 border-4 border-[#1A8754] border-t-transparent rounded-full animate-spin"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-6 h-6 border-2 border-[#F5B729] border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-6 h-6 border-2 border-[#004aad] border-t-transparent rounded-full animate-spin"></div>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export function Matches() {
                   game.status === 'live' 
                     ? 'bg-[#1A8754]' 
                     : game.status === 'upcoming'
-                    ? 'bg-[#F5B729]'
+                    ? 'bg-[#004aad]'
                     : 'bg-gray-600'
                 }`}>
                   <div className="flex items-center justify-between">
@@ -175,7 +175,7 @@ export function Matches() {
                         <p className="font-medium text-white">{game.teama}</p>
                       </div>
                       <div className="px-4">
-                        <div className="text-2xl font-bold text-[#F5B729]">VS</div>
+                        <div className="text-2xl font-bold text-[#004aad]">VS</div>
                       </div>
                       <div className="text-center flex-1">
                         <div className="w-26 h-26 mx-auto">
@@ -210,7 +210,7 @@ export function Matches() {
 
                   <a
                     href={`/games/${game.id}`}
-                    className="block w-full text-center py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                    className="block w-full text-center py-3 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300"
                   >
                     Place Bet
                   </a>

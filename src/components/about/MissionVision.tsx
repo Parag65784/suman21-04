@@ -48,8 +48,8 @@ export const MissionVision: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className={`bg-gradient-to-br from-[#0D3158] to-[#0A2540] p-8 rounded-xl shadow-xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="flex items-center space-x-4 mb-6">
-              <div className="flex-shrink-0 bg-[#0A1929] p-3 rounded-lg">
-                <Shield className="text-[#F5B729] w-8 h-8" />
+              <div className="flex-shrink-0 bg-white p-3 rounded-lg">
+                <Shield className="text-[#004aad] w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-white">Our Mission</h3>
             </div>
@@ -74,8 +74,8 @@ export const MissionVision: React.FC = () => {
           
           <div className={`bg-gradient-to-br from-[#0D3158] to-[#0A2540] p-8 rounded-xl shadow-xl transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="flex items-center space-x-4 mb-6">
-              <div className="flex-shrink-0 bg-[#0A1929] p-3 rounded-lg">
-                <Users className="text-[#F5B729] w-8 h-8" />
+              <div className="flex-shrink-0 bg-white p-3 rounded-lg">
+                <Users className="text-[#004aad] w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-white">Who We Are</h3>
             </div>

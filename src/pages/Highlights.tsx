@@ -92,7 +92,7 @@ export function Highlights() {
         
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest <span className="text-[#F5B729]">Highlights</span>
+            Latest <span className="text-[#004aad]">Highlights</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-300 max-w-2xl">
@@ -189,17 +189,17 @@ export function Highlights() {
             {/* Trending Box */}
             <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <TrendingUp className="text-[#F5B729]" />
+                <TrendingUp className="text-[#004aad]" />
                 <h3 className="text-xl font-bold text-white">Trending</h3>
               </div>
               <div className="space-y-4">
-                <div className="text-gray-300 hover:text-[#F5B729] cursor-pointer transition-colors">
+                <div className="text-gray-300 hover:text-[#cb6ce6] cursor-pointer transition-colors">
                   #IPL2025Final
                 </div>
-                <div className="text-gray-300 hover:text-[#F5B729] cursor-pointer transition-colors">
+                <div className="text-gray-300 hover:text-[#cb6ce6] cursor-pointer transition-colors">
                   #CSKvsMI
                 </div>
-                <div className="text-gray-300 hover:text-[#F5B729] cursor-pointer transition-colors">
+                <div className="text-gray-300 hover:text-[#cb6ce6] cursor-pointer transition-colors">
                   #CricketFever
                 </div>
               </div>
@@ -208,7 +208,7 @@ export function Highlights() {
             {/* Latest News */}
             <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <Newspaper className="text-[#F5B729]" />
+                <Newspaper className="text-[#004aad]" />
                 <h3 className="text-xl font-bold text-white">Latest News</h3>
               </div>
               <div className="space-y-4">
@@ -227,7 +227,7 @@ export function Highlights() {
             {/* Live Updates */}
             <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <Bell className="text-[#F5B729]" />
+                <Bell className="text-[#004aad]" />
                 <h3 className="text-xl font-bold text-white">Live Updates</h3>
               </div>
               <div className="space-y-4">

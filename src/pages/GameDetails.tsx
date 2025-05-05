@@ -150,7 +150,7 @@ export function GameDetails() {
     return (
       <div className="min-h-screen bg-[#0A1929] flex items-center justify-center">
         <div className="text-center">
-          <AlertCircle className="mx-auto h-16 w-16 text-[#F5B729] mb-4" />
+          <AlertCircle className="mx-auto h-16 w-16 text-[#004aad] mb-4" />
           <h2 className="text-2xl font-bold text-white mb-2">Game Not Found</h2>
           <p className="text-gray-400">The game you're looking for doesn't exist.</p>
         </div>
@@ -165,9 +165,9 @@ export function GameDetails() {
           <div className="bg-[#1A3A5C] p-6">
             <div className="flex items-center space-x-3 mb-4">
               {game.type === 'win' ? (
-                <Trophy className="text-[#F5B729]" size={32} />
+                <Trophy className="text-[#cb6ce6]" size={32} />
               ) : (
-                <Target className="text-[#F5B729]" size={32} />
+                <Target className="text-[#cb6ce6]" size={32} />
               )}
               <h1 className="text-2xl font-bold text-white">
                 {game.type === 'win' ? 'Match Winner Prediction' : 'Score Prediction'}
@@ -197,7 +197,7 @@ export function GameDetails() {
                   </div>
                   <p className="text-xl font-semibold text-white">{game.teama}</p>
                 </div>
-                <div className="text-3xl font-bold text-[#F5B729] px-6">VS</div>
+                <div className="text-3xl font-bold text-[#004aad] px-6">VS</div>
                 <div className="text-center flex-1">
                   <div className="w-32 h-32 mx-auto mb-3 bg-[#1A3A5C] rounded-lg p-2">
                     <img
@@ -233,7 +233,7 @@ export function GameDetails() {
                       onClick={() => setPrediction((idx + 1).toString())}
                       className={`p-3 rounded-lg text-sm transition-colors duration-300 ${
                         prediction === (idx + 1).toString()
-                          ? 'bg-[#F5B729] text-[#0A2540]'
+                          ? 'bg-[#004aad] text-white'
                           : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                       }`}
                     >
@@ -253,7 +253,7 @@ export function GameDetails() {
                   <select
                     value={prediction}
                     onChange={(e) => setPrediction(e.target.value)}
-                    className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                    className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#cb6ce6]"
                     required
                   >
                     <option value="">Select a team</option>
@@ -273,7 +273,7 @@ export function GameDetails() {
                   step="0.01"
                   value={betAmount}
                   onChange={(e) => setBetAmount(e.target.value)}
-                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F5B729]"
+                  className="w-full bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#cb6ce6]"
                   required
                 />
                 <p className="text-sm text-gray-400 mt-1">
@@ -290,7 +290,7 @@ export function GameDetails() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-3 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300 disabled:opacity-50"
+                className="w-full py-3 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300 disabled:opacity-50"
               >
                 {submitting ? 'Placing Bet...' : 'Place Bet'}
               </button>

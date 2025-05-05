@@ -27,34 +27,40 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <Trophy className="h-8 w-8 text-[#1A8754]" />
-            <span className="text-2xl font-bold text-[#F5B729]">CrickWin</span>
+          <img
+            src="../../public/logo.png"
+            alt="Logo"
+            className="h-12 w-12 object-contain"
+          />
+            <span className="text-2xl font-bold bg-gradient-to-r from-[#004aad] to-[#cb6ce6] bg-clip-text text-transparent">
+              CrickWin
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+            <Link to="/" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
               <Home size={20} />
               <span>Home</span>
             </Link>
-            <Link to="/about" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+            <Link to="/about" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
               <Info size={20} />
               <span>About</span>
             </Link>
-            <Link to="/how-to-play" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+            <Link to="/how-to-play" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
               <HelpCircle size={20} />
               <span>How to Play</span>
             </Link>
-            <Link to="/matches" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+            <Link to="/matches" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
               <Trophy size={20} />
               <span>Matches</span>
             </Link>
-            <Link to="/highlights" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+            <Link to="/highlights" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
               <Bell size={20} />
               <span>Highlights</span>
             </Link>
             {user && (
-              <Link to="/deposit" className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">
+              <Link to="/deposit" className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300">
                 <Wallet size={20} />
                 <span>Deposit</span>
               </Link>
@@ -74,7 +80,7 @@ export function Navbar() {
               <>
                 <Link
                   to="/dashboard"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300"
                 >
                   <User size={20} />
                   <span>Dashboard</span>

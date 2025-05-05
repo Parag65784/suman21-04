@@ -58,7 +58,7 @@ const SellerModal: React.FC<SellerModalProps> = ({ seller, onClose }) => {
                   onClick={() => setSelectedCurrency(currency)}
                   className={`py-2 px-3 rounded-md text-center text-sm transition-colors ${
                     selectedCurrency === currency
-                      ? 'bg-[#F5B729] text-[#0A2540]'
+                      ? 'bg-[#004aad] text-white'
                       : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                   }`}
                 >
@@ -193,7 +193,7 @@ export function Deposit() {
                   onClick={() => setMethod('crypto')}
                   className={`w-full p-4 rounded-lg flex items-center space-x-3 transition-colors ${
                     method === 'crypto' 
-                      ? 'bg-[#F5B729] text-[#0A2540]' 
+                      ? 'bg-[#004aad] text-white' 
                       : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                   }`}
                 >
@@ -204,7 +204,7 @@ export function Deposit() {
                   onClick={() => setMethod('upi')}
                   className={`w-full p-4 rounded-lg flex items-center space-x-3 transition-colors ${
                     method === 'upi' 
-                      ? 'bg-[#F5B729] text-[#0A2540]' 
+                      ? 'bg-[#004aad] text-white' 
                       : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                   }`}
                 >
@@ -215,7 +215,7 @@ export function Deposit() {
                   onClick={() => setMethod('p2p')}
                   className={`w-full p-4 rounded-lg flex items-center space-x-3 transition-colors ${
                     method === 'p2p' 
-                      ? 'bg-[#F5B729] text-[#0A2540]' 
+                      ? 'bg-[#004aad] text-white' 
                       : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
                   }`}
                 >
@@ -311,7 +311,7 @@ export function Deposit() {
                     <h3 className="text-xl font-semibold mb-4">💡 Payment Notes</h3>
                     <ul className="list-disc pl-6 space-y-2 text-sm text-gray-300">
                       <li>1 INR = 1 eRs. Funds will be instantly credited to your Crickwin wallet.</li>
-                      <li>Ensure your UPI address is correctly updated for successful withdrawals and deposits.</li>
+                      <li>Ensure your UPI address is correctly updated for successful withdrawals and deposit.</li>
                       <li>To withdraw via Binance or any EVM chain, update your wallet address in settings.</li>
                       <li>Blockchain withdrawals will incur additional network transaction fees.</li>
                       <li>UPI deposits are processed instantly. Withdrawals may take up to 30 minutes.</li>
@@ -345,7 +345,7 @@ export function Deposit() {
                             <td className="py-4 px-6">
                               <div className="text-white font-medium">{seller.name}</div>
                             </td>
-                            <td className="py-4 px-6 text-[#F5B729]">
+                            <td className="py-4 px-6 text-[#cb6ce6]">
                               {seller.balance.toLocaleString()} e₹‎
                             </td>
                             <td className="py-4 px-6">
@@ -367,7 +367,7 @@ export function Deposit() {
                               </div>
                             </td>
                             <td className="py-4 px-6">
-                              <button className="text-[#F5B729] hover:text-[#E3A82A] transition-colors">
+                              <button className="text-[#004aad] hover:text-[#cb6ce6] transition-colors">
                                 View Details
                               </button>
                             </td>

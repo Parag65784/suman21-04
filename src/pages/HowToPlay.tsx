@@ -34,7 +34,7 @@ export const HowToPlay: React.FC = () => {
         <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
-              How to <span className="text-[#F5B729]">Play</span>
+              How to <span className="text-[#004aad]">Play</span>
             </h1>
             <div className="w-20 h-1 bg-[#1A8754] mb-6" />
             <p className="text-xl text-gray-200 max-w-2xl">
@@ -88,7 +88,7 @@ export const HowToPlay: React.FC = () => {
               }
             ].map((step, index) => (
               <div key={index} className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C] hover:border-[#1A8754] transition-all duration-300 transform hover:-translate-y-2">
-                <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+                <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>

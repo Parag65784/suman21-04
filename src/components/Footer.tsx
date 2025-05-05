@@ -21,23 +21,29 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <Trophy className="h-8 w-8 text-[#1A8754]" />
-              <h3 className="text-2xl font-bold text-[#F5B729]">CrickWin</h3>
+            <img
+              src="../../public/logo.png"
+              alt="Logo"
+              className="h-12 w-12 object-contain"
+            />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-[#004aad] to-[#cb6ce6] bg-clip-text text-transparent">
+                CrickWin
+              </h3>
             </div>
             <p className="text-gray-400">
               Experience the thrill of cricket game with CrickWin - Your trusted platform for secure and responsible gaming.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">
+              <a href="https://www.facebook.com/groups/698281725898127" target='_blank' className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">
+              <a href="https://x.com/prince_dap5208" target='_blank' className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -48,16 +54,16 @@ export function Footer() {
             <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Home</Link>
+                <Link to="/" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Home</Link>
               </li>
               <li>
-                <Link to="/matches" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Matches</Link>
+                <Link to="/matches" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Matches</Link>
               </li>
               <li>
-                <Link to="/how-to-play" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">How to Play</Link>
+                <Link to="/how-to-play" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">How to Play</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">About Us</Link>
+                <Link to="/about" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">About Us</Link>
               </li>
             </ul>
           </div>
@@ -67,16 +73,16 @@ export function Footer() {
             <h4 className="text-white font-bold text-lg mb-6">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/terms" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Terms & Conditions</Link>
+                <Link to="/terms" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Terms & Conditions</Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Privacy Policy</Link>
+                <Link to="/privacy" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/responsible-gaming" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Responsible Gaming</Link>
+                <Link to="/responsible-gaming" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Responsible Gaming</Link>
               </li>
               <li>
-                <Link to="/fair-play" className="text-gray-400 hover:text-[#F5B729] transition-colors duration-300">Fair Play Policy</Link>
+                <Link to="/fair-play" className="text-gray-400 hover:text-[#004aad] transition-colors duration-300">Fair Play Policy</Link>
               </li>
             </ul>
           </div>
@@ -90,7 +96,7 @@ export function Footer() {
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 text-[#F5B729] hover:text-[#E3A82A] transition-colors duration-300"
+                className="inline-flex items-center space-x-2 text-[#004aad] hover:text-[#cb6ce6] transition-colors duration-300"
               >
                 <Mail className="w-5 h-5" />
                 <span>Get in touch</span>
@@ -106,13 +112,13 @@ export function Footer() {
               &copy; {new Date().getFullYear()} CrickWin. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link to="/terms" className="text-gray-400 hover:text-[#F5B729] text-sm transition-colors duration-300">
+              <Link to="/terms" className="text-gray-400 hover:text-[#004aad] text-sm transition-colors duration-300">
                 Terms
               </Link>
-              <Link to="/privacy" className="text-gray-400 hover:text-[#F5B729] text-sm transition-colors duration-300">
+              <Link to="/privacy" className="text-gray-400 hover:text-[#004aad] text-sm transition-colors duration-300">
                 Privacy
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-[#F5B729] text-sm transition-colors duration-300">
+              <Link to="/cookies" className="text-gray-400 hover:text-[#004aad] text-sm transition-colors duration-300">
                 Cookies
               </Link>
             </div>

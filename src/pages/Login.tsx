@@ -31,7 +31,7 @@ export function Login() {
       <div className="max-w-md mx-auto px-4">
         <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-2xl border border-[#1A3A5C]">
           <div className="flex items-center justify-center mb-8">
-            <div className="bg-[#1A8754]/10 p-4 rounded-xl text-[#F5B729]">
+            <div className="bg-[#1A8754]/10 p-4 rounded-xl text-[#004aad]">
               <LogIn className="w-12 h-12" />
             </div>
           </div>
@@ -59,7 +59,7 @@ export function Login() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-3 bg-[#0A1929] border border-[#1A3A5C] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#F5B729] transition-colors"
+                  className="block w-full pl-10 pr-3 py-3 bg-[#0A1929] border border-[#1A3A5C] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#cb6ce6] transition-colors"
                   placeholder="Enter your email"
                 />
               </div>
@@ -79,7 +79,7 @@ export function Login() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-3 bg-[#0A1929] border border-[#1A3A5C] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#F5B729] transition-colors"
+                  className="block w-full pl-10 pr-3 py-3 bg-[#0A1929] border border-[#1A3A5C] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[cb6ce6] transition-colors"
                   placeholder="Enter your password"
                 />
               </div>
@@ -88,7 +88,7 @@ export function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-4 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300 flex items-center justify-center space-x-2"
+              className="w-full py-3 px-4 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300 flex items-center justify-center space-x-2"
             >
               {loading ? (
                 <div className="w-6 h-6 border-2 border-[#0A2540] border-t-transparent rounded-full animate-spin"></div>

@@ -58,7 +58,7 @@ export function ArticlePage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-2">Article Not Found</h2>
           <p className="text-gray-400">The article you're looking for doesn't exist.</p>
-          <Link to="/highlights" className="text-[#F5B729] hover:text-[#E3A82A] mt-4 inline-block">
+          <Link to="/highlights" className="text-[#004aad] hover:text-[#cb6ce6] mt-4 inline-block">
             Back to Highlights
           </Link>
         </div>
@@ -84,7 +84,7 @@ export function ArticlePage() {
           <div className="max-w-7xl mx-auto">
             <Link 
               to="/highlights"
-              className="inline-flex items-center space-x-2 text-[#F5B729] hover:text-[#E3A82A] mb-6 transition-colors"
+              className="inline-flex items-center space-x-2 text-[#004aad] hover:text-[#cb6ce6] mb-6 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Highlights</span>
@@ -133,7 +133,7 @@ export function ArticlePage() {
                 <h3 className="text-xl font-bold text-white mb-4">About the Author</h3>
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#1A3A5C] rounded-full flex items-center justify-center">
-                    <User className="w-8 h-8 text-[#F5B729]" />
+                    <User className="w-8 h-8 text-[#004aad]" />
                   </div>
                   <div>
                     <p className="text-white font-medium">{article.author}</p>

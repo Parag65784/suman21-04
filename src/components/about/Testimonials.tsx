@@ -83,7 +83,7 @@ export const Testimonials: React.FC = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === activeIndex ? 'bg-[#F5B729]' : 'bg-gray-600'}`}
+                    className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${index === activeIndex ? 'bg-[#cb6ce6]' : 'bg-gray-600'}`}
                     onClick={() => setActiveIndex(index)}
                   />
                 ))}
@@ -91,7 +91,7 @@ export const Testimonials: React.FC = () => {
               
               <div className="text-center">
                 <div className="flex justify-center mb-6">
-                  <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#F5B729]">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#004aad]">
                     <img 
                       src={testimonials[activeIndex].image} 
                       alt={testimonials[activeIndex].name} 
@@ -102,7 +102,7 @@ export const Testimonials: React.FC = () => {
                 
                 <div className="flex justify-center mb-6">
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-[#F5B729] fill-[#F5B729]" />
+                    <Star key={i} className="w-5 h-5 text-[#004aad] fill-[#cb6ce6]" />
                   ))}
                 </div>
                 
@@ -110,7 +110,7 @@ export const Testimonials: React.FC = () => {
                   "{testimonials[activeIndex].quote}"
                 </blockquote>
                 
-                <div className="text-[#F5B729] font-bold text-lg mb-1">{testimonials[activeIndex].name}</div>
+                <div className="text-[#004aad] font-bold text-lg mb-1">{testimonials[activeIndex].name}</div>
                 <div className="text-gray-400">{testimonials[activeIndex].location}</div>
               </div>
             </div>

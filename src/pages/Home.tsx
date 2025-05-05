@@ -78,7 +78,7 @@ export function Home() {
                     </p>
                     <Link
                       to="/how-to-play"
-                      className="inline-flex items-center px-8 py-4 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#004aad] to-[#cb6ce6] text-white font-bold rounded-lg hover:opacity-90 transition-opacity duration-300"
                     >
                       <span>Start Playing</span>
                       <ChevronRight className="ml-2 w-5 h-5" />

@@ -31,7 +31,7 @@ export const AboutHero: React.FC = () => {
       <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-            About <span className="text-[#F5B729]">CrickWin</span>
+            About <span className="text-[#004aad]">CrickWin</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl">

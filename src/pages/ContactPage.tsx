@@ -53,7 +53,7 @@ export const ContactPage: React.FC = () => {
         
         <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Contact <span className="text-[#F5B729]">Our Team</span>
+            Contact <span className="text-[#004aad]">Our Team</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-200 max-w-2xl">
@@ -97,7 +97,7 @@ export const ContactPage: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#F5B729] text-white"
+                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#cb6ce6] text-white"
                   required
                 />
               </div>
@@ -110,7 +110,7 @@ export const ContactPage: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#F5B729] text-white"
+                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#cb6ce6] text-white"
                   required
                 />
               </div>
@@ -123,7 +123,7 @@ export const ContactPage: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#F5B729] text-white"
+                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#cb6ce6] text-white"
                   required
                 />
               </div>
@@ -136,7 +136,7 @@ export const ContactPage: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#F5B729] text-white resize-none"
+                  className="w-full px-4 py-3 bg-[#0A1929] border border-gray-700 rounded-lg focus:outline-none focus:border-[#cb6ce6] text-white resize-none"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@ export const ContactPage: React.FC = () => {
               <div className="md:col-span-2">
                 <button
                   type="submit"
-                  className="w-full md:w-auto px-8 py-4 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300 flex items-center justify-center space-x-2"
+                  className="w-full md:w-auto px-8 py-4 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300 flex items-center justify-center space-x-2"
                 >
                   <span>Send Message</span>
                   <Send className="w-5 h-5" />
@@ -171,7 +171,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, content, link })
       href={link}
       className="block bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C] hover:border-[#1A8754] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl group"
     >
-      <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729] group-hover:bg-[#1A8754]/20 transition-colors duration-300">
+      <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#004aad] group-hover:bg-[#1A8754]/20 transition-colors duration-300">
         {icon}
       </div>
       <h3 className="text-xl font-bold text-white mb-3">{title}</h3>

@@ -28,7 +28,7 @@ export function Privacy() {
         
         <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Privacy <span className="text-[#F5B729]">Policy</span>
+            Privacy <span className="text-[#004aad]">Policy</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-200 max-w-2xl">
@@ -40,7 +40,7 @@ export function Privacy() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <Database className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>
@@ -65,7 +65,7 @@ export function Privacy() {
           </div>
 
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <Shield className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
@@ -92,7 +92,7 @@ export function Privacy() {
 
         <div className="mt-8">
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/10 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <Lock className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Data Security</h2>

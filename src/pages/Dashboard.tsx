@@ -187,7 +187,7 @@ export function Dashboard() {
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <div className="bg-[#1A8754]/10 p-2 rounded-lg">
-                  <User className="w-6 h-6 text-[#F5B729]" />
+                  <User className="w-6 h-6 text-[#cb6ce6]" />
                 </div>
                 <h2 className="text-2xl font-bold text-white">{profile?.name}</h2>
               </div>
@@ -198,7 +198,7 @@ export function Dashboard() {
             </div>
             <div className="bg-[#1A3A5C] rounded-lg p-4">
               <p className="text-sm text-gray-400 mb-1">Available Balance</p>
-              <p className="text-3xl font-bold text-[#F5B729]">₹{profile?.balance || 0}</p>
+              <p className="text-3xl font-bold text-[#cb6ce6]">₹{profile?.balance || 0}</p>
             </div>
           </div>
 
@@ -214,7 +214,7 @@ export function Dashboard() {
                   type="text"
                   value={walletAddress}
                   onChange={(e) => setWalletAddress(e.target.value)}
-                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#F5B729]"
+                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#cb6ce6]"
                   placeholder="Enter your wallet address"
                 />
                 <button
@@ -237,7 +237,7 @@ export function Dashboard() {
                   type="text"
                   value={upiId}
                   onChange={(e) => setUpiId(e.target.value)}
-                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#F5B729]"
+                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#cb6ce6]"
                   placeholder="Enter your UPI ID"
                 />
                 <button
@@ -260,12 +260,12 @@ export function Dashboard() {
                   type="number"
                   value={withdrawAmount}
                   onChange={(e) => setWithdrawAmount(e.target.value)}
-                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#F5B729]"
+                  className="flex-1 bg-[#0A1929] border border-[#1A3A5C] rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-[#cb6ce6]"
                   placeholder="Enter amount"
                 />
                 <button
                   onClick={requestWithdrawal}
-                  className="px-6 py-2 bg-[#F5B729] text-[#0A2540] font-bold rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                  className="px-6 py-2 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300"
                 >
                   Withdraw
                 </button>
@@ -283,7 +283,7 @@ export function Dashboard() {
             onClick={() => setActiveTab('transactions')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'transactions'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -294,7 +294,7 @@ export function Dashboard() {
             onClick={() => setActiveTab('bets')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'bets'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
