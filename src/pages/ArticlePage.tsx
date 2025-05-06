@@ -45,7 +45,7 @@ export function ArticlePage() {
         <div className="relative">
           <div className="w-12 h-12 border-4 border-[#1A8754] border-t-transparent rounded-full animate-spin"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-[#F5B729] border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-6 h-6 border-2 border-[#cb6ce6] border-t-transparent rounded-full animate-spin"></div>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@ export function ArticlePage() {
                 <h3 className="text-xl font-bold text-white mb-4">About the Author</h3>
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#1A3A5C] rounded-full flex items-center justify-center">
-                    <User className="w-8 h-8 text-[#004aad]" />
+                    <img className="w-12 h-12" src='https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/teamlogo/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0ZWFtbG9nby9sb2dvLnBuZyIsImlhdCI6MTc0NjUxNTc5MiwiZXhwIjoxNzc4MDUxNzkyfQ.msQqgUyvfmrQLL0KB2Z-uWvIySbOQqV8CBXX0RPaoHA' />
                   </div>
                   <div>
                     <p className="text-white font-medium">{article.author}</p>

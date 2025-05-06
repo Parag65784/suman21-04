@@ -28,7 +28,7 @@ export function Terms() {
         
         <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Terms & <span className="text-[#F5B729]">Conditions</span>
+            Terms & <span className="text-[#004aad]">Conditions</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-200 max-w-2xl">
@@ -40,7 +40,7 @@ export function Terms() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <ScrollText className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
@@ -56,25 +56,25 @@ export function Terms() {
           </div>
 
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <UserCheck className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Eligibility</h2>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Must be at least 18 years old</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Legal capacity to enter into contracts</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Not restricted by applicable laws</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Valid identity verification</span>
               </li>
             </ul>
@@ -83,7 +83,7 @@ export function Terms() {
 
         <div className="mt-8">
           <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-xl border border-[#1A3A5C]">
-            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#F5B729]">
+            <div className="bg-[#1A8754]/20 p-4 rounded-xl mb-6 inline-block text-[#004aad]">
               <Scale className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">Game Rules</h2>
@@ -92,15 +92,15 @@ export function Terms() {
                 <h3 className="text-white font-medium mb-3">General Rules</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>All bets are final once placed</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>Minimum and maximum bet limits apply</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>Results are based on official match outcomes</span>
                   </li>
                 </ul>
@@ -109,15 +109,15 @@ export function Terms() {
                 <h3 className="text-white font-medium mb-3">Void Bets</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>Technical errors or glitches</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>Suspicious gaming patterns</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                     <span>Cancelled or abandoned matches</span>
                   </li>
                 </ul>

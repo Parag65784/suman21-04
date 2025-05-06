@@ -23,9 +23,9 @@ export const HowToPlay: React.FC = () => {
         {/* Decorative cricket ball pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-[200px] h-[200px] opacity-20">
-            <div className="w-full h-full rounded-full border-[8px] border-[#F5B729]">
+            <div className="w-full h-full rounded-full border-[8px] border-[#cb6ce6]">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[70%] h-[70%] border-[4px] border-dashed border-[#F5B729] rounded-full animate-spin-slow"></div>
+                <div className="w-[70%] h-[70%] border-[4px] border-dashed border-[#cb6ce6] rounded-full animate-spin-slow"></div>
               </div>
             </div>
           </div>

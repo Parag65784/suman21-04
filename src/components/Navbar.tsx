@@ -28,7 +28,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
           <img
-            src="../../public/logo.png"
+            src="https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/teamlogo/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0ZWFtbG9nby9sb2dvLnBuZyIsImlhdCI6MTc0NjUxNTc5MiwiZXhwIjoxNzc4MDUxNzkyfQ.msQqgUyvfmrQLL0KB2Z-uWvIySbOQqV8CBXX0RPaoHA"
             alt="Logo"
             className="h-12 w-12 object-contain"
           />
@@ -66,7 +66,7 @@ export function Navbar() {
               </Link>
             )}
             {userRole === 'admin' && (
-              <Link to="/admin" className="flex items-center space-x-2 text-[#F5B729] font-semibold hover:text-yellow-400 transition-colors duration-300">
+              <Link to="/admin" className="flex items-center space-x-2 text-[#cb6ce6] font-semibold hover:text-yellow-400 transition-colors duration-300">
                 <User size={20} />
                 <span>Admin Panel</span>
               </Link>
@@ -97,14 +97,14 @@ export function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300"
                 >
                   <LogIn size={20} />
                   <span>Login</span>
                 </Link>
                 <Link
                   to="/register"
-                  className="flex items-center space-x-2 px-6 py-2 bg-[#F5B729] text-[#0A2540] rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                  className="flex items-center space-x-2 px-6 py-2 bg-[#cb6ce6] text-[#0A2540] rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
                 >
                   <UserPlus size={20} />
                   <span>Register</span>
@@ -116,7 +116,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="lg:hidden text-gray-300 hover:text-[#F5B729] transition-colors duration-300"
+            className="lg:hidden text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -126,23 +126,23 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Home</Link>
-              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">About</Link>
-              <Link to="/how-to-play" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">How to Play</Link>
-              <Link to="/matches" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Matches</Link>
-              <Link to="/highlights" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Highlights</Link>
+              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Home</Link>
+              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">About</Link>
+              <Link to="/how-to-play" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">How to Play</Link>
+              <Link to="/matches" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Matches</Link>
+              <Link to="/highlights" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Highlights</Link>
               {user && (
-                <Link to="/deposit" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Deposit</Link>
+                <Link to="/deposit" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Deposit</Link>
               )}
               {userRole === 'admin' && (
-                <Link to="/admin" className="block px-3 py-2 text-[#F5B729] font-semibold hover:text-yellow-400 transition-colors duration-300">
+                <Link to="/admin" className="block px-3 py-2 text-[#cb6ce6] font-semibold hover:text-yellow-400 transition-colors duration-300">
                   Admin Panel
                 </Link>
               )}
 
               {user ? (
                 <>
-                  <Link to="/dashboard" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Dashboard</Link>
+                  <Link to="/dashboard" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Dashboard</Link>
                   <button
                     onClick={handleSignOut}
                     className="block w-full text-left px-3 py-2 text-red-500 hover:text-red-400 transition-colors duration-300"
@@ -152,8 +152,8 @@ export function Navbar() {
                 </>
               ) : (
                 <>
-                  <Link to="/login" className="block px-3 py-2 text-gray-300 hover:text-[#F5B729] transition-colors duration-300">Login</Link>
-                  <Link to="/register" className="block px-3 py-2 text-[#F5B729] hover:text-[#E3A82A] transition-colors duration-300">Register</Link>
+                  <Link to="/login" className="block px-3 py-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300">Login</Link>
+                  <Link to="/register" className="block px-3 py-2 text-[#cb6ce6] hover:text-[#E3A82A] transition-colors duration-300">Register</Link>
                 </>
               )}
             </div>

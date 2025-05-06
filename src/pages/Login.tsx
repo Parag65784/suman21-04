@@ -32,7 +32,7 @@ export function Login() {
         <div className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] p-8 rounded-xl shadow-2xl border border-[#1A3A5C]">
           <div className="flex items-center justify-center mb-8">
             <div className="bg-[#1A8754]/10 p-4 rounded-xl text-[#004aad]">
-              <LogIn className="w-12 h-12" />
+              <img className="w-14 h-14" src='https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/teamlogo/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0ZWFtbG9nby9sb2dvLnBuZyIsImlhdCI6MTc0NjUxNTc5MiwiZXhwIjoxNzc4MDUxNzkyfQ.msQqgUyvfmrQLL0KB2Z-uWvIySbOQqV8CBXX0RPaoHA'/>
             </div>
           </div>
           

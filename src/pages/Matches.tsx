@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { Database } from '../lib/database.types';
+import { GameCard } from '../components/GameCard';
 import { Trophy, Target, Clock } from 'lucide-react';
 
 type Game = Database['public']['Tables']['games']['Row'];
@@ -118,104 +119,7 @@ export function Matches() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredGames.map((game) => (
-              <div key={game.id} className="bg-gradient-to-br from-[#0A2540] to-[#0D3158] rounded-xl shadow-2xl border border-[#1A3A5C] overflow-hidden hover:border-[#1A8754] transition-all duration-300 transform hover:-translate-y-1">
-                <div className={`p-4 ${
-                  game.status === 'live' 
-                    ? 'bg-[#1A8754]' 
-                    : game.status === 'upcoming'
-                    ? 'bg-[#004aad]'
-                    : 'bg-gray-600'
-                }`}>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      {game.type === 'win' ? (
-                        <Trophy className="text-white" size={24} />
-                      ) : (
-                        <Target className="text-white" size={24} />
-                      )}
-                      <span className="text-white font-semibold">
-                        {game.type === 'win' ? 'Match Winner' : 'Score Prediction'}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      {game.status === 'live' && (
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                      )}
-                      <span className="text-white font-medium text-sm">
-                        {game.status.toUpperCase()}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <Clock className="w-4 h-4 text-gray-400" />
-                    <p className="text-gray-400 text-sm">
-                      {new Date(game.date).toLocaleString('en-US', {
-                        dateStyle: 'medium',
-                        timeStyle: 'short'
-                      })}
-                    </p>
-                  </div>
-
-                  {game.type === 'win' ? (
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-center flex-1">
-                        <div className="w-26 h-26 mx-auto">
-                          <img
-                            src={game.teama_logo_url || `https://cricket.org/teams/${game.teama?.toLowerCase()}.png`}
-                            alt={game.teama}
-                            className="w-full h-full object-contain"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/64';
-                            }}
-                          />
-                        </div>
-                        <p className="font-medium text-white">{game.teama}</p>
-                      </div>
-                      <div className="px-4">
-                        <div className="text-2xl font-bold text-[#004aad]">VS</div>
-                      </div>
-                      <div className="text-center flex-1">
-                        <div className="w-26 h-26 mx-auto">
-                          <img
-                            src={game.teamb_logo_url || `https://cricket.org/teams/${game.teamb?.toLowerCase()}.png`}
-                            alt={game.teamb}
-                            className="w-full h-full object-contain"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/64';
-                            }}
-                          />
-                        </div>
-                        <p className="font-medium text-white">{game.teamb}</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center flex flex-col items-center mb-6">
-                      <div className="w-20 h-20">
-                        <img
-                          src={game.team_logo_url || `https://cricket.org/teams/${game.team?.toLowerCase()}.png`}
-                          alt={game.team}
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = 'https://via.placeholder.com/64';
-                          }}
-                        />
-                      </div>
-                      <p className="font-medium text-white mb-1">{game.team}</p>
-                      <p className="text-sm text-gray-400">Predict the final score</p>
-                    </div>
-                  )}
-
-                  <a
-                    href={`/games/${game.id}`}
-                    className="block w-full text-center py-3 bg-[#004aad] text-white font-bold rounded-lg hover:bg-[#cb6ce6] transition-colors duration-300"
-                  >
-                    Place Bet
-                  </a>
-                </div>
-              </div>
+              <GameCard key={game.id} game={game} />
             ))}
           </div>
         )}

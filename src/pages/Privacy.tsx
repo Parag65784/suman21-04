@@ -46,19 +46,19 @@ export function Privacy() {
             <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Name and contact information</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Date of birth and identity verification</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Payment and transaction details</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Game history and preferences</span>
               </li>
             </ul>
@@ -71,19 +71,19 @@ export function Privacy() {
             <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Provide and improve our services</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Process transactions securely</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Send important notifications</span>
               </li>
               <li className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Prevent fraud and ensure compliance</span>
               </li>
             </ul>

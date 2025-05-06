@@ -42,7 +42,7 @@ const SellerModal: React.FC<SellerModalProps> = ({ seller, onClose }) => {
         <div className="space-y-5">
           {/* Seller Rating */}
           <div className="flex items-center space-x-2">
-            <Star className="w-4 h-4 text-[#F5B729] fill-[#F5B729]" />
+            <Star className="w-4 h-4 text-[#cb6ce6] fill-[#cb6ce6]" />
             <span className="text-white text-sm font-medium">{seller.rating} / 5.0</span>
           </div>
   
@@ -81,7 +81,7 @@ const SellerModal: React.FC<SellerModalProps> = ({ seller, onClose }) => {
             {/* Available Balance */}
             <div className="bg-[#1A3A5C] rounded-md p-3 w-1/2">
               <p className="text-xs text-gray-400 mb-1">Available Balance</p>
-              <p className="text-2xl font-bold text-[#F5B729]">e₹‎{seller.balance || 0}</p>
+              <p className="text-2xl font-bold text-[#cb6ce6]">e₹‎{seller.balance || 0}</p>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ const SellerModal: React.FC<SellerModalProps> = ({ seller, onClose }) => {
   
           {/* Warning */}
           <div className="bg-[#1A3A5C] p-3 rounded-md flex items-start space-x-2">
-            <AlertTriangle className="w-4 h-4 text-[#F5B729] flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="w-4 h-4 text-[#cb6ce6] flex-shrink-0 mt-0.5" />
             <p className="text-gray-300 text-xs">
               Please verify the wallet address before sending any funds. Only send {selectedCurrency} to this address.
             </p>
@@ -269,7 +269,7 @@ export function Deposit() {
                   </div>
                   <div className="mt-8 p-4 bg-[#1A3A5C] rounded-lg">
                     <div className="flex items-start space-x-3">
-                      <AlertTriangle className="w-5 h-5 text-[#F5B729] flex-shrink-0 mt-1" />
+                      <AlertTriangle className="w-5 h-5 text-[#cb6ce6] flex-shrink-0 mt-1" />
                       <p className="text-gray-300">
                         Please update your wallet address in the dashboard first. Use the same wallet for deposits and withdrawals to ensure smooth transactions.
                       </p>
@@ -350,7 +350,7 @@ export function Deposit() {
                             </td>
                             <td className="py-4 px-6">
                               <div className="flex items-center space-x-1">
-                                <Star className="w-4 h-4 text-[#F5B729] fill-[#F5B729]" />
+                                <Star className="w-4 h-4 text-[#cb6ce6] fill-[#cb6ce6]" />
                                 <span className="text-white">{seller.rating}</span>
                               </div>
                             </td>

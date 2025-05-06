@@ -44,15 +44,15 @@ export function ResponsibleGaming() {
             </p>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>24/7 support for problem gambling</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Self-exclusion options</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#F5B729] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#cb6ce6] rounded-full"></div>
                 <span>Deposit and game limits</span>
               </div>
             </div>
@@ -93,29 +93,29 @@ export function ResponsibleGaming() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Playing more than you can afford to lose</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Borrowing money or selling items to gamble</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Neglecting work, school, or family commitments</span>
                 </div>
               </div>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Chasing losses with larger bets</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Lying about gambling habits</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#F5B729] rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#cb6ce6] rounded-full mt-2"></div>
                   <span>Feeling anxious or stressed about gaming</span>
                 </div>
               </div>
