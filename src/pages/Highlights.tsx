@@ -18,10 +18,27 @@ interface Team {
   logo_url: string;
 }
 
+interface LatestNews {
+  id: string;
+  heading: string;
+  news_url: string;
+}
+
+interface LiveUpdate {
+  id: string;
+  match: string;
+  status: string;
+  url: string;
+  timestamp: string;
+}
+
+
 export function Highlights() {
   const [highlights, setHighlights] = useState<Highlight[]>([]);
   const [teams, setTeams] = useState<Team[]>([]);
   const [loading, setLoading] = useState(true);
+  const [liveUpdates, setLiveUpdates] = useState<LiveUpdate[]>([]);
+  const [latestNews, setLatestNews] = useState<LatestNews[]>([]);
 
   useEffect(() => {
     fetchHighlights();
@@ -44,6 +61,27 @@ export function Highlights() {
     }
   }
 
+  useEffect(() => {
+    fetchLatestNews();
+  }, []);
+
+  async function fetchLatestNews() {
+    try {
+      const { data, error } = await supabase
+        .from('latest_news')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setLatestNews(data || []);
+    } catch (error) {
+      console.error('Error fetching Latest News:', error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
   async function fetchTeams() {
     try {
       const { data, error } = await supabase
@@ -55,6 +93,30 @@ export function Highlights() {
       setTeams(data || []);
     } catch (error) {
       console.error('Error fetching teams:', error);
+    }
+  }
+
+  useEffect(() => {
+    fetchLiveUpdates();
+  }, []);
+
+  async function fetchLiveUpdates() {
+    try {
+      const { data, error } = await supabase
+        .from('live_updates')
+        .select('match, url, status')
+        .order('created_at', { ascending: false });
+  
+      if (error) throw error;
+      setLiveUpdates(
+        (data || []).map((update) => ({
+          ...update,
+          id: update.id || 'unknown-id',
+          timestamp: update.timestamp || new Date().toISOString(),
+        }))
+      );
+    } catch (error) {
+      console.error('Error fetching live updates:', error);
     }
   }
 
@@ -211,17 +273,24 @@ export function Highlights() {
                 <Newspaper className="text-[#004aad]" />
                 <h3 className="text-xl font-bold text-white">Latest News</h3>
               </div>
-              <div className="space-y-4">
-                <div className="text-gray-300 hover:text-white cursor-pointer transition-colors">
-                  IPL 2025 Schedule Announced
-                </div>
-                <div className="text-gray-300 hover:text-white cursor-pointer transition-colors">
-                  New Team Joins the League
-                </div>
-                <div className="text-gray-300 hover:text-white cursor-pointer transition-colors">
-                  Player Auction Highlights
-                </div>
-              </div>
+              <ul className="space-y-2 list-disc list-inside">
+                {latestNews.length > 0 ? (
+                  latestNews.map((update) => (
+                    <li key={update.id} className="text-white">
+                      <a
+                        href={update.news_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-light hover:underline"
+                      >
+                        {update.heading}
+                      </a>
+                    </li>
+                  ))
+                ) : (
+                  <p className="text-gray-400">No live News updates available.</p>
+                )}
+              </ul>
             </div>
 
             {/* Live Updates */}
@@ -230,17 +299,26 @@ export function Highlights() {
                 <Bell className="text-[#004aad]" />
                 <h3 className="text-xl font-bold text-white">Live Updates</h3>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#1A8754] rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">CSK vs MI - Live</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#1A8754] rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">RCB vs KKR - Starting Soon</span>
-                </div>
-              </div>
+              <ul className="space-y-2 list-disc list-inside">
+                {liveUpdates.length > 0 ? (
+                  liveUpdates.map((update) => (
+                    <li key={update.id} className="text-white">
+                      <a
+                        href={update.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-light hover:underline"
+                      >
+                        {update.match}-{update. status}
+                      </a>
+                    </li>
+                  ))
+                ) : (
+                  <p className="text-gray-400">No live updates available.</p>
+                )}
+              </ul>
             </div>
+
           </div>
         </div>
       </div>
