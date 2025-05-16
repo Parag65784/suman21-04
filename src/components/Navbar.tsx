@@ -97,14 +97,14 @@ export function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#cb6ce6] transition-colors duration-300"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-[#004aad] transition-colors duration-300"
                 >
                   <LogIn size={20} />
                   <span>Login</span>
                 </Link>
                 <Link
                   to="/register"
-                  className="flex items-center space-x-2 px-6 py-2 bg-[#cb6ce6] text-[#0A2540] rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
+                  className="flex items-center space-x-2 px-6 py-2 bg-[#004aad] text-white rounded-lg hover:bg-[#E3A82A] transition-colors duration-300"
                 >
                   <UserPlus size={20} />
                   <span>Register</span>

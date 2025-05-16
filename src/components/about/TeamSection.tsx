@@ -113,7 +113,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, image, delay, 
         
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <h3 className="text-xl font-bold text-white mb-1">{name}</h3>
-          <p className="text-[#cb6ce6] font-medium">{role}</p>
+          <p className="text-[#004aad] font-medium">{role}</p>
         </div>
       </div>
       

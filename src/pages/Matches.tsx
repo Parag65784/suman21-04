@@ -88,7 +88,7 @@ export function Matches() {
         
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Available <span className="text-[#F5B729]">Matches</span>
+            Available <span className="text-[#004aad]">Matches</span>
           </h1>
           <div className="w-20 h-1 bg-[#1A8754] mb-6" />
           <p className="text-xl text-gray-300 max-w-2xl">
@@ -104,7 +104,7 @@ export function Matches() {
             onClick={() => handleTabChange('all')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'all'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -115,7 +115,7 @@ export function Matches() {
             onClick={() => handleTabChange('win')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'win'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
@@ -126,7 +126,7 @@ export function Matches() {
             onClick={() => handleTabChange('score')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
               activeTab === 'score'
-                ? 'bg-[#F5B729] text-[#0A2540]'
+                ? 'bg-[#004aad] text-white'
                 : 'bg-[#1A3A5C] text-white hover:bg-[#1A8754]'
             }`}
           >
