@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-bg-dark text-neutral-white;
+    @apply dark:bg-bg-dark bg-bg-light text-neutral-black dark:text-neutral-white;
   }
 }
 
@@ -32,23 +32,23 @@
   }
 
   .card {
-    @apply bg-bg-card border border-bg-light rounded-lg shadow-md;
+    @apply dark:bg-bg-card-dark bg-bg-card-light border dark:border-bg-light border-gray-200 rounded-lg shadow-md;
   }
 
   .form-input {
-    @apply bg-bg-light border-bg-light text-neutral-white focus:border-primary focus:ring-primary;
+    @apply dark:bg-bg-light bg-white border dark:border-bg-light border-gray-200 dark:text-neutral-white text-neutral-black focus:border-primary focus:ring-primary;
   }
 
   .table-header {
-    @apply bg-bg-light text-neutral-white;
+    @apply dark:bg-bg-light bg-gray-50 dark:text-neutral-white text-neutral-black;
   }
 
   .table-row {
-    @apply hover:bg-bg-light border-b border-bg-light;
+    @apply hover:bg-bg-light dark:hover:bg-bg-light border-b dark:border-bg-light border-gray-200;
   }
 
   .nav-link {
-    @apply text-neutral-silver hover:text-neutral-white transition-colors duration-200;
+    @apply dark:text-neutral-silver text-neutral-gray hover:text-neutral-white dark:hover:text-neutral-white transition-colors duration-200;
   }
 
   .nav-link-active {
@@ -71,24 +71,23 @@
     @apply bg-danger-light text-danger-dark;
   }
 
-  /* Updated page container to remove left/right gap */
   .page-container {
     @apply w-full max-w-none px-0 mx-0 py-8;
   }
 
   .page-title {
-    @apply text-3xl font-bold text-neutral-white mb-6;
+    @apply text-3xl font-bold dark:text-neutral-white text-neutral-black mb-6;
   }
 
   .page-section {
-    @apply bg-bg-card p-6 rounded-lg shadow-lg mb-8;
+    @apply dark:bg-bg-card-dark bg-bg-card-light p-6 rounded-lg shadow-lg mb-8;
   }
 
   .section-title {
-    @apply text-xl font-semibold text-neutral-white mb-4;
+    @apply text-xl font-semibold dark:text-neutral-white text-neutral-black mb-4;
   }
 
   .text-content {
-    @apply text-neutral-silver leading-relaxed space-y-4;
+    @apply dark:text-neutral-silver text-neutral-gray leading-relaxed space-y-4;
   }
 }

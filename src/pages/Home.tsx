@@ -109,15 +109,15 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">5K+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">15K+</div>
               <div className="text-gray-300">Active Users</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">41+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">84+</div>
               <div className="text-gray-300">Matches Covered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">₹.62Cr+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">₹2.62Cr+</div>
               <div className="text-gray-300">Payouts Made</div>
             </div>
             <div className="text-center">

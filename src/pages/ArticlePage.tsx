@@ -66,23 +66,25 @@ export function ArticlePage() {
     );
   }
 
+  const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(window.location.href)}`;
+
   return (
     <div className="min-h-screen bg-[#0A1929]">
       {/* Full-width hero image */}
       <div className="relative h-[70vh] w-full overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ 
+          style={{
             backgroundImage: `url(${article.image_url})`,
-            filter: "brightness(0.8)"
+            filter: 'brightness(0.8)',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-[#0A1929]/50 to-transparent" />
-        
+
         {/* Hero content */}
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <div className="max-w-7xl mx-auto">
-            <Link 
+            <Link
               to="/highlights"
               className="inline-flex items-center space-x-2 text-[#cb6ce6] hover:text-[#004aad] mb-6 transition-colors"
             >
@@ -97,11 +99,13 @@ export function ArticlePage() {
             <div className="flex flex-wrap items-center gap-6 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />
-                <span>{new Date(article.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}</span>
+                <span>
+                  {new Date(article.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <User className="w-5 h-5" />
@@ -121,7 +125,9 @@ export function ArticlePage() {
               <div className="prose prose-lg prose-invert max-w-none">
                 <div className="text-gray-300 leading-relaxed space-y-6">
                   {article.content.split('\n').map((paragraph, index) => (
-                    <p key={index} className="text-lg">{paragraph}</p>
+                    <p key={index} className="text-lg">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               </div>
@@ -133,7 +139,11 @@ export function ArticlePage() {
                 <h3 className="text-xl font-bold text-white mb-4">About the Author</h3>
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-[#1A3A5C] rounded-full flex items-center justify-center">
-                    <img className="w-12 h-12" src='https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/teamlogo/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0ZWFtbG9nby9sb2dvLnBuZyIsImlhdCI6MTc0NjUxNTc5MiwiZXhwIjoxNzc4MDUxNzkyfQ.msQqgUyvfmrQLL0KB2Z-uWvIySbOQqV8CBXX0RPaoHA' />
+                    <img
+                      className="w-12 h-12"
+                      src="https://kpbkicpgqdsjdkbaghur.supabase.co/storage/v1/object/sign/teamlogo/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0ZWFtbG9nby9sb2dvLnBuZyIsImlhdCI6MTc0NjUxNTc5MiwiZXhwIjoxNzc4MDUxNzkyfQ.msQqgUyvfmrQLL0KB2Z-uWvIySbOQqV8CBXX0RPaoHA"
+                      alt={`${article.author} avatar`}
+                    />
                   </div>
                   <div>
                     <p className="text-white font-medium">{article.author}</p>
@@ -145,10 +155,27 @@ export function ArticlePage() {
               <div className="bg-[#0A2540] rounded-xl p-6 border border-[#1A3A5C]">
                 <h3 className="text-xl font-bold text-white mb-4">Share Article</h3>
                 <div className="flex space-x-4">
-                  <button className="flex-1 bg-[#1A3A5C] text-white py-2 rounded-lg hover:bg-[#1A8754] transition-colors">
+                  <button
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator
+                          .share({
+                            title: article.title,
+                            url: window.location.href,
+                          })
+                          .catch(console.error);
+                      } else {
+                        alert('Sharing not supported on this browser');
+                      }
+                    }}
+                    className="flex-1 bg-[#1A3A5C] text-white py-2 rounded-lg hover:bg-[#1A8754] transition-colors"
+                  >
                     Share
                   </button>
-                  <button className="flex-1 bg-[#1A3A5C] text-white py-2 rounded-lg hover:bg-[#1A8754] transition-colors">
+                  <button
+                    onClick={() => window.open(twitterShareUrl, '_blank')}
+                    className="flex-1 bg-[#1A3A5C] text-white py-2 rounded-lg hover:bg-[#1A8754] transition-colors"
+                  >
                     Tweet
                   </button>
                 </div>

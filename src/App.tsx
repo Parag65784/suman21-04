@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { AuthProvider } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
@@ -25,6 +26,7 @@ import { ContactPage } from './pages/ContactPage';
 function App() {
   return (
     <Router>
+      <ThemeProvider>
         <AuthProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -70,8 +72,9 @@ function App() {
             </Route>
           </Routes>
         </AuthProvider>
+      </ThemeProvider>
     </Router>
   );
 }
 
-export default App;
+export default App
